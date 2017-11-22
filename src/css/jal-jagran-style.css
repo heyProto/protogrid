@@ -8,7 +8,7 @@ p {
 .proto-sidebar {
   background: #f1f1f1;
   height: 100vh;
-  position: relative; }
+  position: fixed; }
 
 .project-name {
   font-size: 24px;
@@ -98,9 +98,12 @@ p {
   font-family: 'cabin', serif;
   color: white; }
 
+.article-col {
+  padding-top: 10px; }
+
 .tweet-col {
-  background: #f1f1f1;
-  border-color: #f1f1f1;
+  background: #fafafa;
+  border-color: #fafafa;
   padding: 5px 10px; }
 
 .briefs-column .tolink-card {
@@ -128,9 +131,7 @@ p {
   margin-bottom: 10px; }
 
 .proto-card {
-  padding-left: 10px;
   padding-top: 15px;
-  padding-right: 20px;
   padding-bottom: 50px;
   width: 100%;
   display: inline-block;

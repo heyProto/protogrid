@@ -14,7 +14,7 @@ p{
 .proto-sidebar{
     background: #f1f1f1;
     height: 100vh;
-    position: relative;
+    position: fixed;
 }
 
 .project-name{
@@ -126,11 +126,15 @@ p{
 
 //===== 7-col-content =====//
 
+.article-col{
+    padding-top: 10px;
+}
+
 //===== 4-col-content =====//
 
 .tweet-col{
-    background: #f1f1f1;
-    border-color: #f1f1f1;
+    background: #fafafa;
+    border-color: #fafafa;
     padding: 5px 10px;
 }
 
@@ -163,9 +167,9 @@ p{
 //===== ProtoCard ======//
 
 .proto-card {
-  padding-left: 10px;
+  // padding-left: 10px;
   padding-top: 15px;
-  padding-right: 20px;
+  // padding-right: 20px;
   padding-bottom: 50px;
   width: 100%;
   display: inline-block;
