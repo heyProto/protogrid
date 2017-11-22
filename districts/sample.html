@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>#jal-jagran</title>
+    <link rel="stylesheet" type="text/css" href="./../jaljagran-lib.min.css">
+    <link rel="stylesheet" type="text/css" href="./../lib/css/protograph-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="./../jaljagran-home.min.css">
+    <script type="text/javascript">
+      var siteId, origin, base_url;
+      // Setting variables from environment
+      origin = window.location.origin;
+      if (location.hostname === "cdn.protograph.pykih.com") {
+        siteId = '1';
+      }
+
+      if(siteId){
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        _paq.push(['trackEvent', '#jal-jagran', 'page_view', 'index-page']);
+        (function() {
+          var u="//protograph.innocraft.cloud/";
+          _paq.push(['setTrackerUrl', u+'piwik.php']);
+          _paq.push(['setSiteId', siteId]);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+      }
+    </script>
+  </head>
+  <body class="index-page">
+    <div class="container proto-container">
+      <div class="col-sm-16 no-padding-col">
+        <div class="col-sm-2 no-padding-col protograph-app-navbar">
+          <div class="protograph-app-navbar-content filter-column">
+            <div class="protograph-app-navbar-logo-container">
+              <div class="protograph-app-navbar-hashtag">#jal-jagran</div>
+              <img class="protograph-app-navbar-logo-image" src="../img/jj-logo.png" width="100%">
+            </div>
+            <div class="protograph-app-links-holder">
+              <a class="sidebar-url" href="../index.html">
+                <div class="protograph-app-navbar-option">
+                  <div class="category-name">कवरेज</div>
+                </div>
+              </a>
+              <a class="sidebar-url" href="../data.html">
+                <div class="protograph-app-navbar-option no-border-bottom protograph-app-navbar-option-active">
+                  <div class="category-name">डेटा</div>
+                </div>
+              </a>
+            </div>
+            <div class="social-options page-bottom protograph-app-social-share-buttons">
+              <a href="http://www.facebook.com/sharer/sharer.php?u=https://cdn.protograph.pykih.com/jal-jagran/index.html" target="_blank" class="share-btn facebook">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="http://twitter.com/share?url=https://cdn.protograph.pykih.com/jal-jagran/index.html" target="_blank" class="share-btn twitter">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-14 protograph-app-main-container protograph-district-page-main-container">
+          <div class="article-cover-area">
+            <h1>आगरा</h1>
+          </div>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-9 no-padding-col protograph-district-page-card-container">
+            <div id='card-list-div1'></div>
+            <div id='card-list-div2'></div>
+            <div id='card-list-div3'></div>
+            <div id='card-list-div4'></div>
+            <div id='card-list-div5'></div>
+          </div>
+          <div class="protograph-page-space"></div>
+        </div>
+      </div>
+    </div>
+    <script src="../lib/js/jquery.min.js"></script>
+    <script type='text/javascript' src='../jaljagran-lib.min.js'></script>
+    <script src="https://cdn.protograph.pykih.com/lib/protoGraph.min.js"></script>
+    <script type='text/javascript' src='../jaljagran-district.min.js'></script>
+    <script>
+      var mode = (window.innerWidth <= 500) ? 'mobile' : 'laptop';new ProtoEmbed.initFrame('card-list-div1','https://s3.ap-south-1.amazonaws.com/dev.cdn.protograph/64c43aaad1d5c4848e2b/index.html?view_cast_id=396fe60c655d7721350504b2%26schema_id=c604e96223dd12fbf314', mode);new ProtoEmbed.initFrame('card-list-div2','https://s3.ap-south-1.amazonaws.com/dev.cdn.protograph/73c2e4114665d37c1532/index.html?view_cast_id=8142fc2320a8852480164ade%26schema_id=6ba6a13bf0ccd536d78c', mode);new ProtoEmbed.initFrame('card-list-div3','https://s3.ap-south-1.amazonaws.com/dev.cdn.protograph/d884e08a38f267a689d1/index.html?view_cast_id=6689e636576b4451a8673e8f%26schema_id=cca2142e67a4aa8acdd8', mode);new ProtoEmbed.initFrame('card-list-div4','https://s3.ap-south-1.amazonaws.com/dev.cdn.protograph/3c1017ae4c1bad611142/index.html?view_cast_id=a5e1023661e799464b51f178%26schema_id=1dec26e89d434e7bf055', mode);new ProtoEmbed.initFrame('card-list-div5','https://s3.ap-south-1.amazonaws.com/dev.cdn.protograph/ab7f37b31fb91496a7d7/index.html?view_cast_id=42b8057640976cc2b6c790a5%26schema_id=1d5501e535539ee8020d', mode);
+    </script>
+  </body>
+</html>

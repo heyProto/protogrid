@@ -40,11 +40,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
   if (mode === 'laptop'){
     $('.filter-column').sticky();
-    $("body").css("background", "-webkit-linear-gradient(left, #f1f1f1 , white)");
-    $("body").css("background", "-webkit-linear-gradient(left, #f1f1f1 , white)");
-    $("body").css("background", "-o-linear-gradient(left, #f1f1f1 , white)");
-    $("body").css("background", "-moz-linear-gradient(left, #f1f1f1 , white)");
-    $("body").css("background", "linear-gradient(left, #f1f1f1 , white)");
     $('.protograph-app-main-container').css('height', 'auto');
   } else {
     $('.mobile-header').sticky({topSpacing:0, zIndex: 99});

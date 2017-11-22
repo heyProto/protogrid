@@ -119,13 +119,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
           $('.protograph-app-3col-grid').css('display', 'block');
           $('.protograph-app-main-container').css('height', 'auto');
           $('.protograph-app-navbar').addClass('protograph-app-navbar-slide-in');
-          setTimeout(() =>{
-            $("body").css("background", "-webkit-linear-gradient(left, #f1f1f1 , white)");
-            $("body").css("background", "-webkit-linear-gradient(left, #f1f1f1 , white)");
-            $("body").css("background", "-o-linear-gradient(left, #f1f1f1 , white)");
-            $("body").css("background", "-moz-linear-gradient(left, #f1f1f1 , white)");
-            $("body").css("background", "linear-gradient(left, #f1f1f1 , white)");
-          },500);
           setTimeout(() => {
               $('.protograph-app-3col-grid').addClass('protograph-app-3col-grid-slide-up');
               setTimeout(() => {
