@@ -322,3 +322,11 @@ p{
     height: 200px;
     background: blue;
 }
+
+.tabs {
+  display: none;
+}
+
+.tabs.active-area{
+  display: block;
+}
