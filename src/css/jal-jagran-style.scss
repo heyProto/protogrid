@@ -36,7 +36,7 @@ p{
 .sidebar-menu-option{
     color: #00000040;
     opacity: 1;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     font-family: 'cabin', serif;
     padding: 7px 0px;
@@ -273,3 +273,13 @@ p{
     padding: 5px 10px;
 }
 
+//===== data page - filter col =====//
+.filter-col{
+}
+
+.filter-title{
+    background: $brand-color;
+    color: white;
+    padding: 20px 10px 10px 10px;
+    margin-top: -20px;
+}

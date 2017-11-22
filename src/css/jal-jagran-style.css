@@ -27,7 +27,7 @@ p {
 .sidebar-menu-option {
   color: #00000040;
   opacity: 1;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: 'cabin', serif;
   padding: 7px 0px;
@@ -228,5 +228,11 @@ p {
   background: #007cd7;
   color: white;
   padding: 5px 10px; }
+
+.filter-title {
+  background: #007cd7;
+  color: white;
+  padding: 20px 10px 10px 10px;
+  margin-top: -20px; }
 
 /*# sourceMappingURL=jal-jagran-style.css.map */
