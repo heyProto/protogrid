@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   });
   // },1000);
 
-  let interval = setInterval(function(){
+  setInterval(function(){
     getJSON('https://cdn.protograph.pykih.com/jal-jagran/twitter.json', function (err, data){
       if (err != null) {
         alert('Something went wrong: ' + err);
