@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           setTimeout(() => {
               $('.protograph-app-3col-grid').addClass('protograph-app-3col-grid-slide-up');
               setTimeout(() => {
-                $('.briefs-column').sticky();
+                $('.briefs-column').sticky({"widthFromWrapper": false});
                 $('.filter-column').sticky();
                 $('.about-advertisement').sticky();
               },750);
