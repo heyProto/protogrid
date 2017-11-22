@@ -64,10 +64,18 @@ class App extends React.Component {
       $('.banner-area .sticky-wrapper').css("display", 'inline-block');
     }
 
-    $('#myTab a').on('click', function (e) {
-      e.preventDefault()
-      $(this).tab('show')
+    // $('#myTab a').on('click', function (e) {
+    //   e.preventDefault()
+    //   $(this).tab('show')
+    // });
+
+    $(".tabs-area .single-tab").on("click", function(e){
+      $(".single-tab").removeClass("active-tab");
+      $(this).addClass("active-tab");
+      $(".tabs.active-area").removeClass("active-area");
+      $(".tabs"+this.dataset.href).addClass("active-area");
     });
+
   }
 
   sortObject(obj, filter) {
@@ -160,33 +168,29 @@ class App extends React.Component {
       $('.social-share-icons').css("display", "block")
       return (
         <div className="banner-area">
-          <div className="col-sm-6 filter-area sidenav" style={{left: this.state.sidebar_left}}>
-            <Filter
-              configurationJSON={this.props.filterConfigurationJSON}
-              dataJSON={this.state.filteredDataJSON}
-              filterJSON={this.state.filterJSON}
-              onChange={(e) => {this.onChange(e);}}
-            />
-          </div>
-          <div className="col-sm-10 no-padding-col data-page-cards">
-            <div className="protograph-container">
-              <ul className="nav nav-tabs" id="myTab" role="tablist">
-                <li className="nav-item">
-                  <a className="nav-link protograph-app-nav-tabs active" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="true">नक्शा</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link protograph-app-nav-tabs" id="list-tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">सूची</a>
-                </li>
-              </ul>
-              <div className="tab-content" id="myTabContent">
-                <div className="tab-pane fade show active" id="map" role="tabpanel" aria-labelledby="map-tab">
-                  <Map dataJSON={this.state.filteredDataJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} />
-                </div>
-                <div className="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
-                  <List dataJSON={this.state.filteredDataJSON} mode={this.props.mode} />
-                </div>
+          <div className="proto-col col-4 filter-col parent-col">
+              <div className="filter-title">
+                Filter
               </div>
-            </div>
+              {/*<div className="filter-options">
+                  <div className="single-filter-option">option 1</div>
+                  <div className="single-filter-option">option 2</div>
+                  <div className="single-filter-option">option 3</div>
+              </div>*/}
+              <Filter
+                configurationJSON={this.props.filterConfigurationJSON}
+                dataJSON={this.state.filteredDataJSON}
+                filterJSON={this.state.filterJSON}
+                onChange={(e) => {this.onChange(e);}}
+              />
+          </div>
+          <div className="proto-col col-10">
+              <div className="tabs-area">
+                  <div className="single-tab active-tab" id='map-tab' data-href='#map-area' >Map</div>
+                  <div className="single-tab" id='list-tab' data-href='#list-area'>list</div>
+              </div>
+              <div className="tabs map-area active-area" id='map-area'><Map dataJSON={this.state.filteredDataJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} /></div>
+              <div className="tabs list-area" id='list-area'><List dataJSON={this.state.filteredDataJSON} mode={this.props.mode} /></div>
           </div>
         </div>
       )
