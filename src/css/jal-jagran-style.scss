@@ -36,7 +36,7 @@ p{
 .sidebar-menu-option{
     color: #00000040;
     opacity: 1;
-    font-size: 12px;
+    font-size: 16px;
     text-transform: uppercase;
     font-family: 'cabin', serif;
     padding: 7px 0px;
@@ -45,17 +45,21 @@ p{
     letter-spacing: 0.5px;
 }
 
-.active-option{
-    color: $brand-color;
+a:last-child .sidebar-menu-option{
+    border-bottom: 0px;
 }
 
-.sidebar-menu-option:last-child{
-    border-bottom: 0px;
+.active-option{
+    color: $brand-color;
 }
 
 .sidebar-menu-option:hover{
     color: $brand-color;
     opacity: 1;
+}
+
+a{
+    text-decoration: none;
 }
 
 .sidebar-footer{
@@ -113,6 +117,7 @@ p{
     padding-top: 100px;
     font-family: 'Bitter', serif;
     color: white;
+    margin-bottom: 10px;
 }
 
 .page-sub-title{
@@ -122,6 +127,15 @@ p{
     letter-spacing: 0.3px;
     font-family: 'cabin', serif;
     color: white;
+}
+
+.cover-text{
+    color:white;
+    font-size: 14px;
+    width: 80%;
+    margin-top: 20px;
+    padding-left: 5px;
+    line-height: 24px;
 }
 
 //===== 7-col-content =====//
