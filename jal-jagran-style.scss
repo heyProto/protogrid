@@ -38,6 +38,10 @@ $brand-color:#007cd7;
     letter-spacing: 0.5px;
 }
 
+.active-option{
+    color: $brand-color;
+}
+
 .sidebar-menu-option:last-child{
     border-bottom: 0px;
 }
@@ -64,14 +68,14 @@ $brand-color:#007cd7;
         .facebook-icon{
             display: inline-block;
             float: left;
-            opacity: 0.4;
-            margin: 0px 20px;
+            opacity: 0.8;
+            margin: 0px 25px;
         }
         .twitter-icon{
             display: inline-block;
             float: left;
-            opacity: 0.4;
-            margin: 0px 20px;
+            opacity: 0.8;
+            margin: 0px 25px;
         }
         .facebook-icon:hover, .twitter-icon:hover{
             opacity: 1;
@@ -90,11 +94,16 @@ $brand-color:#007cd7;
     margin-bottom: 20px;
 }
 
+.data-page{
+    .cover-image{
+        height: 200px;
+    }
+}
+
 .page-title{
     font-size: 42px;
     font-weight: bold;
-    margin-bottom: 10px;
-    padding-top: 70px;
+    padding-top: 100px;
     font-family: 'Bitter', serif;
     color: white;
 }

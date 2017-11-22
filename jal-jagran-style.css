@@ -29,6 +29,9 @@
   cursor: pointer;
   letter-spacing: 0.5px; }
 
+.active-option {
+  color: #007cd7; }
+
 .sidebar-menu-option:last-child {
   border-bottom: 0px; }
 
@@ -52,13 +55,13 @@
     .sidebar-footer .social-share .facebook-icon {
       display: inline-block;
       float: left;
-      opacity: 0.4;
-      margin: 0px 20px; }
+      opacity: 0.8;
+      margin: 0px 25px; }
     .sidebar-footer .social-share .twitter-icon {
       display: inline-block;
       float: left;
-      opacity: 0.4;
-      margin: 0px 20px; }
+      opacity: 0.8;
+      margin: 0px 25px; }
     .sidebar-footer .social-share .facebook-icon:hover, .sidebar-footer .social-share .twitter-icon:hover {
       opacity: 1;
       cursor: pointer; }
@@ -71,11 +74,13 @@
   overflow: hidden;
   margin-bottom: 20px; }
 
+.data-page .cover-image {
+  height: 200px; }
+
 .page-title {
   font-size: 42px;
   font-weight: bold;
-  margin-bottom: 10px;
-  padding-top: 70px;
+  padding-top: 100px;
   font-family: 'Bitter', serif;
   color: white; }
 
