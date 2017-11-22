@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Cabin:400,500,600,700");
+p {
+  font-family: cabin;
+  margin: 5px 0px;
+  line-height: 1.6;
+  color: #707175; }
+
 .proto-sidebar {
   background: #f1f1f1;
   height: 100vh;
@@ -14,7 +20,7 @@
 
 .sidebar-menu {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   width: 100%; }
 
@@ -44,10 +50,11 @@
   bottom: 20px; }
   .sidebar-footer .powered-by-text {
     font-family: cabin;
-    letter-spacing: 3px;
+    letter-spacing: 2.3px;
     text-transform: uppercase;
     color: #00000040;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    font-size: 10px; }
   .sidebar-footer .social-share {
     display: inline-block;
     width: 100%;
@@ -56,12 +63,11 @@
       display: inline-block;
       float: left;
       opacity: 0.8;
-      margin: 0px 25px; }
+      margin-right: 25px; }
     .sidebar-footer .social-share .twitter-icon {
       display: inline-block;
       float: left;
-      opacity: 0.8;
-      margin: 0px 25px; }
+      opacity: 0.8; }
     .sidebar-footer .social-share .facebook-icon:hover, .sidebar-footer .social-share .twitter-icon:hover {
       opacity: 1;
       cursor: pointer; }
