@@ -275,6 +275,9 @@ p{
 
 //===== data page - filter col =====//
 .filter-col{
+    font-size: 16px;
+    font-family: cabin;
+    border-right: 1px solid #efefef;
 }
 
 .filter-title{
@@ -282,4 +285,40 @@ p{
     color: white;
     padding: 20px 10px 10px 10px;
     margin-top: -20px;
+}
+
+.single-filter-option{
+    padding: 15px 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+//===== data page - tabs col =====//
+
+.tabs-area{
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 10px;
+}
+
+.single-tab{
+    font-size: 16px;
+    font-family: cabin;
+    border-bottom: 3px solid white;
+    display: inline-block;
+    padding: 0px 25px 8px;
+    cursor: pointer;
+}
+
+.active-tab{
+    color: $brand-color;
+    border-color: $brand-color;
+}
+
+.map-test{
+    height: 200px;
+    background: red;
+}
+
+.list-test{
+    height: 200px;
+    background: blue;
 }
