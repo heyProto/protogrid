@@ -50,7 +50,7 @@ class App extends React.Component {
     let dimension = this.getScreenSize();
 
     if(this.props.mode === 'laptop') {
-      $('.filter-area').sticky({topSpacing:0});
+      $('.filter-col').sticky({topSpacing:0});
       $('.banner-area .sticky-wrapper').css('float', 'left');
       $('.banner-area .sticky-wrapper').css("display", 'inline-block');
     }
@@ -59,7 +59,7 @@ class App extends React.Component {
 
   componentDidUpdate() {
     if(this.props.mode === 'laptop') {
-      $('.filter-area').sticky({topSpacing:0});
+      $('.filter-col').sticky({topSpacing:0});
       $('.banner-area .sticky-wrapper').css('float', 'left');
       $('.banner-area .sticky-wrapper').css("display", 'inline-block');
     }
@@ -170,14 +170,14 @@ class App extends React.Component {
       return (
         <div className="banner-area">
           <div className="proto-col col-4 filter-col parent-col protograph-filter-area">
-              <Filter
-                configurationJSON={this.props.filterConfigurationJSON}
-                dataJSON={this.state.filteredDataJSON}
-                filterJSON={this.state.filterJSON}
-                onChange={(e) => {this.onChange(e);}}
-              />
+            <Filter
+              configurationJSON={this.props.filterConfigurationJSON}
+              dataJSON={this.state.filteredDataJSON}
+              filterJSON={this.state.filterJSON}
+              onChange={(e) => {this.onChange(e);}}
+            />
           </div>
-          <div className="proto-col col-10">
+          <div className="proto-col col-10 protograph-app-map-and-list">
               <div className="tabs-area">
               <div className="single-tab active-tab" id='map-tab' data-href='#map-area' >नक्शा</div>
               <div className="single-tab" id='list-tab' data-href='#list-area'>सूची</div>

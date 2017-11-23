@@ -143,6 +143,9 @@
   fill: white;
   fill-opacity: unset;
 }
+.protograph-app-map-and-list {
+  float: right;
+}
 @media only screen and (max-width: 450px ) {
   body {
     background: white;
