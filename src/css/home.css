@@ -1,19 +1,17 @@
-
-
 /* New Home CSS */
 .protograph-app-navbar {
   /*padding-right: 10px;
   padding-left: 10px;
   padding-top: 50px;*/
-  position: absolute;
+  /* position: absolute; */
   left: -600px;
 }
 .protograph-app-navbar-slide-in {
-  left: 0px;
+  left: auto;
   transition: left 650ms ease-out;
 }
-
 .protograph-app-intro-holder {
+  position: relative;
   padding: 20px;
   background-image: url("../img/cover-image.png");
   background-repeat: no-repeat;
@@ -69,9 +67,9 @@
   line-height: 24px;
 }
 .protograph-app-3col-grid {
+  position: relative;
   display: none;
   height: 100%;
-  padding: 20px;
   top: 900px;
 }
 .protograph-app-3col-grid-slide-up {

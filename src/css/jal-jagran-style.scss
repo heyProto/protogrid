@@ -90,6 +90,49 @@ p{
         }
     }
 }
+.protograph-app-navbar-content {
+  padding:15px;
+  background-color: #f1f1f1;
+}
+.protograph-app-navbar-hashtag {
+  font-size: 20px;
+  padding-bottom: 5px;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+}
+.protograph-app-navbar-logo-image {
+  width: 100%;
+}
+.protograph-app-links-holder {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.protograph-app-navbar-option {
+  padding: 0px 15px;
+}
+.protograph-app-navbar-option .category-name {
+  color: #929292;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #dadada;
+}
+.protograph-app-navbar-option.no-border-bottom .category-name {
+  border-bottom: 0px !important;
+}
+.protograph-app-navbar-option:hover .category-name, .protograph-app-navbar-option.protograph-app-navbar-option-active .category-name {
+  color: #007cd7;
+}
+.protograph-app-social-share-buttons {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
 
 //===== cover image area =====//
 .cover-image{

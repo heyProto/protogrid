@@ -117,13 +117,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $('.protograph-app-intro-holder').addClass('protograph-app-intro-holder-animate');
         setTimeout(() => {
           $('.protograph-app-3col-grid').css('display', 'block');
-          $('.protograph-app-main-container').css('height', 'auto');
+          $('.protograph-app-main-container').css('height', '100%');
           $('.protograph-app-navbar').addClass('protograph-app-navbar-slide-in');
           setTimeout(() => {
               $('.protograph-app-3col-grid').addClass('protograph-app-3col-grid-slide-up');
               setTimeout(() => {
                 $('.briefs-column').sticky({"widthFromWrapper": false});
-                $('.filter-column').sticky();
+                // $('.proto-sidebar').sticky();
                 $('.about-advertisement').sticky();
               },750);
             },650);

@@ -102,62 +102,6 @@
 #show-more-cards:focus {
   outline: 0;
 }
-
-/* New Home CSS */
-.protograph-app-main-container {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px !important;
-  background: white;
-}
-.protograph-app-nav-tabs {
-  color: #007cd7;
-  border-bottom: 1px solid transparent;
-  font-size: 16px;
-}
-.protograph-app-intro-holder {
-  /*padding: 20px;*/
-  background-image: url("../../img/cover-image.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  /*border-bottom: 1px solid #dadada;*/
-  /*top: 25%;*/
-}
-.protograph-app-hashtag-container {
-  padding: 10px;
-  height: 180px;
-  display: table;
-}
-.protograph-app-hashtag-group {
-  display: table-cell;
-  vertical-align: middle;
-}
-.protograph-app-hashtag {
-  font-size: 38px;
-  font-family: 'Bitter', serif;
-  font-weight: 700;
-  color: white;
-}
-.protograph-app-hashtag-subline {
-  color: #d4d4d4;
-  margin-top: 10px;
-}
-.protograph-app-nav-tabs.active,.protograph-app-nav-tabs:active,.protograph-app-nav-tabs:hover  {
-  border: 0px;
-  border-bottom: 1px solid #007cd7 !important;
-  background: transparent !important;
-  color: #007cd7;
-}
-.protogrpah-map-dulled-out {
-  cursor: initial;
-  fill: white;
-  fill-opacity: unset;
-}
-.protograph-app-navbar {
-  left: 0px;
-  position: relative;
-}
-
 .protograph-card:hover {
   box-shadow: 0px 5px 15px lightgrey;
   background: whitesmoke;
