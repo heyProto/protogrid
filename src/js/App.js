@@ -160,6 +160,7 @@ class App extends React.Component {
           flexDirection: 'row',
           WebkitFlexWrap: 'wrap',
           flexWrap: 'wrap',
+          clear: 'both'
         }}>
           <div style={style}><Halogen.RiseLoader color={color}/></div>
         </div>
@@ -168,15 +169,10 @@ class App extends React.Component {
       $('.social-share-icons').css("display", "block")
       return (
         <div className="banner-area">
-          <div className="proto-col col-4 filter-col parent-col">
+          <div className="proto-col col-4 filter-col parent-col protograph-filter-area">
               <div className="filter-title">
-                Filter
+                फ़िल्टर
               </div>
-              {/*<div className="filter-options">
-                  <div className="single-filter-option">option 1</div>
-                  <div className="single-filter-option">option 2</div>
-                  <div className="single-filter-option">option 3</div>
-              </div>*/}
               <Filter
                 configurationJSON={this.props.filterConfigurationJSON}
                 dataJSON={this.state.filteredDataJSON}
@@ -186,8 +182,8 @@ class App extends React.Component {
           </div>
           <div className="proto-col col-10">
               <div className="tabs-area">
-                  <div className="single-tab active-tab" id='map-tab' data-href='#map-area' >Map</div>
-                  <div className="single-tab" id='list-tab' data-href='#list-area'>list</div>
+              <div className="single-tab active-tab" id='map-tab' data-href='#map-area' >नक्शा</div>
+              <div className="single-tab" id='list-tab' data-href='#list-area'>सूची</div>
               </div>
               <div className="tabs map-area active-area" id='map-area'><Map dataJSON={this.state.filteredDataJSON} topoJSON={this.state.topoJSON} chartOptions={this.props.chartOptions} mode={this.props.mode} /></div>
               <div className="tabs list-area" id='list-area'><List dataJSON={this.state.filteredDataJSON} mode={this.props.mode} /></div>
