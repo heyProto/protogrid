@@ -1,0 +1,172 @@
+
+
+/* New Home CSS */
+.protograph-app-navbar {
+  /*padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 50px;*/
+  position: absolute;
+  left: -600px;
+}
+.protograph-app-navbar-slide-in {
+  left: 0px;
+  transition: left 650ms ease-out;
+}
+
+.protograph-app-intro-holder {
+  padding: 5px;
+  background-image: url("../img/cover-image.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /*border-bottom: 1px solid #dadada;*/
+  top: 25%;
+}
+.protograph-app-intro-holder-animate {
+  top: 0%;
+  transition: top 650ms ease-out;
+  /*background-position-y: -150px;*/
+  /*background: black;*/
+}
+.protograph-app-main-container {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px !important;
+  height: 100vh;
+  background: white;
+}
+.protograph-app-hashtag-container {
+  padding: 10px;
+  height: 180px;
+  display: table;
+}
+.protograph-app-hashtag-group {
+  display: table-cell;
+  vertical-align: middle;
+}
+.protograph-app-hashtag {
+  font-size: 38px;
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  color: white;
+}
+.protograph-app-hashtag-subline {
+  color: #d4d4d4;
+  margin-top: 10px;
+}
+.protograph-app-cover-image img.cover-image {
+  height: 180px;
+}
+.protograph-app-cover-image {
+  padding-right: 20px;
+}
+.protograph-app-description {
+  /*padding-left: 20px;*/
+  width: 90%;
+  color: white;
+}
+.protograph-app-description p{
+  color: #d4d4d4;
+  line-height: 24px;
+}
+.protograph-app-3col-grid {
+  display: none;
+  height: 100%;
+  padding: 20px;
+  top: 900px;
+}
+.protograph-app-3col-grid-slide-up {
+  top: 0px;
+  transition: top 650ms ease-out;
+  padding-right: 0px;
+  padding: 0px;
+}
+.protograph-app-swipe-left {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;
+  padding: 10px;
+  color: white;
+}
+.protograph-app-touch-overlay {
+  display: none;
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+}
+.protograph-app-active-tab-content {
+  display: block;
+}
+.protograph-app-menu-mobile-cross:after {
+  display: none;
+  content: "\00d7";
+  font-size: 48px;
+}
+.protograph-district-page-main-container {
+  top: 0px;
+}
+.protograph-district-page-navbar {
+  left: 0px;
+}
+
+.article-page-cover{
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 450px) {
+  .protograph-app-3col-grid {
+    display: block;
+    top: 0px;
+  }
+  .protograph-app-intro-holder {
+    top: 0%;
+    border-bottom: 0px;
+    padding-top: 50px;
+  }
+  .protograph-app-hashtag-container {
+    height: auto;
+  }
+  .protograph-app-hashtag-group {
+    vertical-align: top;
+  }
+  .protograph-app-description {
+    display: none;
+  }
+  .protograph-app-swipe-left {
+    display: block;
+  }
+  .protograph-app-touch-overlay {
+    display: block;
+  }
+  .protograph-app-intro-holder {
+    background-size: cover;
+  }
+  .protograph-app-menu-mobile-cross:after {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+  }
+  .protograph-district-page-navbar {
+    left: -500px;
+  }
+  .protograph-app-navbar-slide-in {
+    left: 0px;
+    transition: left 500ms ease-out;
+  }
+  .protograph-district-page .page-navigation-mobile {
+    background: #f1f1f1;
+  }
+  .protograph-district-page .protograph-app-navbar-page-title {
+    font-size: 24px;
+    padding-left: 15px;
+  }
+  .protograph-district-page .protograph-menu-logo {
+    height: 30px;
+    float: right;
+  }
+}

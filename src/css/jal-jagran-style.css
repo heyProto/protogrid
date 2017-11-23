@@ -235,6 +235,9 @@ a {
 .proto-card .feature-story-layout .feature-area {
   overflow: hidden; }
 
+.clearfix {
+  clear: both; }
+
 .why-col {
   border-color: #333;
   background: #007cd7;
@@ -250,7 +253,8 @@ a {
   background: #007cd7;
   color: white;
   padding: 20px 10px 10px 10px;
-  margin-top: -20px; }
+  position: relative;
+  z-index: 10; }
 
 .single-filter-option {
   padding: 15px 10px;

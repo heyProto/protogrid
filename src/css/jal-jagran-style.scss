@@ -277,6 +277,9 @@ a{
   overflow: hidden;
 }
 
+.clearfix {
+    clear: both;
+}
 
 //===== 3-col-content =====//
 
@@ -298,7 +301,9 @@ a{
     background: $brand-color;
     color: white;
     padding: 20px 10px 10px 10px;
-    margin-top: -20px;
+    // margin-top: -20px;
+    position: relative;
+    z-index: 10;
 }
 
 .single-filter-option{

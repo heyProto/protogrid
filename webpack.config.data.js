@@ -1,13 +1,12 @@
 const webpack = require('webpack');
-// const minifier = require('minifier')
-// const input = ['./src/css/data.css', './src/css/filter.css']
-// const options = {
-//   output: "jaljagran-data.min.css"
-// }
-// minifier.minify(input, options);
+const minifier = require('minifier')
+const input = ['./src/css/data.css', './src/css/filter.css']
+const options = {
+  output: "jaljagran-data.min.css"
+}
+minifier.minify(input, options);
 
 module.exports = {
-  // entry: './main.js',
   entry: {
     app: './main.js'
   },
