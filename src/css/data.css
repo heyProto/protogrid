@@ -138,6 +138,11 @@
   overflow: hidden;
   position: relative;
 }
+.protogrpah-map-dulled-out {
+  cursor: initial;
+  fill: white;
+  fill-opacity: unset;
+}
 @media only screen and (max-width: 450px ) {
   body {
     background: white;
