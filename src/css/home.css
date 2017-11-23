@@ -12,7 +12,7 @@
 }
 .protograph-app-intro-holder {
   position: relative;
-  padding: 20px;
+  padding: 5px;
   background-image: url("../img/cover-image.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -76,6 +76,7 @@
   top: 0px;
   transition: top 650ms ease-out;
   padding-right: 0px;
+  padding: 0px;
 }
 .protograph-app-swipe-left {
   display: none;
