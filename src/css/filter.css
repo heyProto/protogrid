@@ -5,6 +5,7 @@
   border-right: 1px solid #efefef;
   border-left: 1px solid #efefef;
   border-bottom: 1px solid #efefef;
+  overflow: hidden;
 }
 .protograph-filters-180-caret {
   -ms-transform: rotate(180deg); /* IE 9 */
