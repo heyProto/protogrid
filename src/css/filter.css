@@ -2,6 +2,9 @@
   width: 100%;
   height: 612px;
   position: relative;
+  border-right: 1px solid #efefef;
+  border-left: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 .protograph-filters-180-caret {
   -ms-transform: rotate(180deg); /* IE 9 */
@@ -25,7 +28,7 @@
 }
 .protograph-filters-selected-filter-toggle {
   display: inline-block;
-  padding: 20px 0px;
+  padding: 15px 0px;
   font-size: 16px;
 }
 .protograph-filters-selected-filter-toggle:hover {
@@ -34,7 +37,7 @@
 .protograph-filters-reset-filter {
   float: right;
   cursor: pointer;
-  padding: 20px 10px;
+  padding: 15px 10px;
   font-size: 14px;
 }
 .protograph-filters-tabs-container {
@@ -54,7 +57,6 @@
 }
 .protograph-filter-items-container {
   height: 100%;
-  border: 1px solid #f7f7f7;
   border-top: 0px;
   border-left: none;
 }
