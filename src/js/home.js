@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         setTimeout(() => {
           $('.protograph-app-3col-grid').css('display', 'block');
           $('.protograph-app-main-container').css('height', '100%');
+          $('.protograph-app-main-container').css('background', 'white');
           $('.protograph-app-navbar').addClass('protograph-app-navbar-slide-in');
           setTimeout(() => {
               $('.protograph-app-3col-grid').addClass('protograph-app-3col-grid-slide-up');
