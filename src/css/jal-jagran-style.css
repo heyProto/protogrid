@@ -223,6 +223,9 @@ p {
 .proto-card .feature-story-layout .feature-area {
   overflow: hidden; }
 
+.clearfix {
+  clear: both; }
+
 .why-col {
   border-color: #333;
   background: #007cd7;
