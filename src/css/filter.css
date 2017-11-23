@@ -61,7 +61,7 @@
 .protograph-filter-item {
   display: table;
   width: 100%;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 .protograph-filter-item.protograph-filters-dulled:hover {
   color: black;
