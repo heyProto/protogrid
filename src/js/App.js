@@ -170,9 +170,6 @@ class App extends React.Component {
       return (
         <div className="banner-area">
           <div className="proto-col col-4 filter-col parent-col protograph-filter-area">
-              <div className="filter-title">
-                फ़िल्टर
-              </div>
               <Filter
                 configurationJSON={this.props.filterConfigurationJSON}
                 dataJSON={this.state.filteredDataJSON}
