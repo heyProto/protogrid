@@ -44,8 +44,16 @@ return `<!DOCTYPE html>
             <div class="sidebar-footer">
                 <div class="proto-branding">
                     <div class="social-share">
-                        <div class="facebook-icon"><img src="../src/img/facebook-icon.png" height="15px"></div>
-                        <div class="twitter-icon"><img src="../src/img/twitter-icon.png" height="15px"></div>
+                      <div class="facebook-icon">
+                        <a href="http://www.facebook.com/sharer/sharer.php?u=https://cdn.protograph.pykih.com/jal-jagran/index.html" target="_blank" class="share-btn facebook">
+                          <img src="../src/img/facebook-icon.png" height="15px">
+                        </a>
+                      </div>
+                      <div class="twitter-icon">
+                        <a href="http://twitter.com/share?url=https://cdn.protograph.pykih.com/jal-jagran/index.html" target="_blank" class="share-btn twitter">
+                           <img src="../src/img/twitter-icon.png" height="15px">
+                        </a>
+                      </div>
                     </div>
                     <div class="powered-by-text">Powered by</div>
                     <img src="../src/img/proto-icon.png" width="50%">
