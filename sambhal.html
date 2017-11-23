@@ -1,5 +1,4 @@
-module.exports = function(options) {
-return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -21,7 +20,7 @@ return `<!DOCTYPE html>
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
-        _paq.push(['trackEvent', '#jal-jagran', 'page_view', "${options.district_name_eng}" ]);
+        _paq.push(['trackEvent', '#jal-jagran', 'page_view', "Sambhal" ]);
         (function() {
           var u="//protograph.innocraft.cloud/";
           _paq.push(['setTrackerUrl', u+'piwik.php']);
@@ -64,7 +63,7 @@ return `<!DOCTYPE html>
         <div class="proto-col col-14 rigth-col parent-col">
             <div class="proto-col col-14 cover-image">
                 <div class="page-title">
-                  ${options.district_name}
+                  संभल
                 </div>
             </div>
             <div class="proto-col col-4">
@@ -83,9 +82,7 @@ return `<!DOCTYPE html>
     <script src="https://cdn.protograph.pykih.com/lib/protoGraph.min.js"></script>
     <script type='text/javascript' src='../jaljagran-district.min.js'></script>
     <script>
-      ${options.code}
+      var mode = (window.innerWidth <= 500) ? 'mobile' : 'laptop';new ProtoEmbed.initFrame('card-list-div1','https://cdn.protograph.pykih.com/64c43aaad1d5c4848e2b/index.html?view_cast_id=fe59ecfda9f784349b9dee0a%26schema_id=c604e96223dd12fbf314', mode);new ProtoEmbed.initFrame('card-list-div2','https://cdn.protograph.pykih.com/73c2e4114665d37c1532/index.html?view_cast_id=0c38f3a19922ac5f695f8c31%26schema_id=6ba6a13bf0ccd536d78c', mode);new ProtoEmbed.initFrame('card-list-div3','https://cdn.protograph.pykih.com/d884e08a38f267a689d1/index.html?view_cast_id=8af15813bd1ffd1c86c6e4de%26schema_id=cca2142e67a4aa8acdd8', mode);new ProtoEmbed.initFrame('card-list-div4','https://cdn.protograph.pykih.com/3c1017ae4c1bad611142/index.html?view_cast_id=558c733e242a79c9ed998b39%26schema_id=1dec26e89d434e7bf055', mode);new ProtoEmbed.initFrame('card-list-div5','https://cdn.protograph.pykih.com/ab7f37b31fb91496a7d7/index.html?view_cast_id=7c983dfea116e8873e2db688%26schema_id=1d5501e535539ee8020d', mode);
     </script>
   </body>
 </html>
-`
-}
