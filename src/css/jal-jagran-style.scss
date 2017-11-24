@@ -66,12 +66,16 @@ a{
     position: absolute;
     bottom: 20px;
     .powered-by-text{
+        display: none;
         font-family: cabin;
         letter-spacing: 2.3px;
         text-transform: uppercase;
         color: #00000040;
         margin-bottom: 5px;
         font-size: 10px;
+    }
+    .protograph-branding {
+        display: none;
     }
     .social-share{
         display: inline-block;

@@ -52,12 +52,15 @@ a {
   position: absolute;
   bottom: 20px; }
   .sidebar-footer .powered-by-text {
+    display: none;
     font-family: cabin;
     letter-spacing: 2.3px;
     text-transform: uppercase;
     color: #00000040;
     margin-bottom: 5px;
     font-size: 10px; }
+  .sidebar-footer .protograph-branding {
+    display: none; }
   .sidebar-footer .social-share {
     display: inline-block;
     width: 100%;

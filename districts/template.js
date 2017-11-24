@@ -56,7 +56,7 @@ return `<!DOCTYPE html>
                       </div>
                     </div>
                     <div class="powered-by-text">Powered by</div>
-                    <img src="../src/img/proto-icon.png" width="50%">
+                    <img class="protograph-branding" src="../src/img/proto-icon.png" width="50%">
                 </div>
             </div>
         </div>
@@ -66,8 +66,6 @@ return `<!DOCTYPE html>
                 <div class="page-title">
                   ${options.district_name}
                 </div>
-            </div>
-            <div class="proto-col col-4">
             </div>
             <div class="proto-col col-7">
               <div class="district-article-cards" id='card-list-div1'></div>

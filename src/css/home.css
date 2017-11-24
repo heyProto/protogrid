@@ -113,9 +113,17 @@
 .protograph-district-page-navbar {
   left: 0px;
 }
-
 .article-page-cover{
   margin-bottom: 30px;
+}
+.protograph-explore-button {
+  display: block;
+  width: 100%;
+  background: #007cd7;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 450px) {
