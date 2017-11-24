@@ -33,8 +33,10 @@ const swipeEndCallback = function(e, direction) {
           current_tab_count += 1;
           if (current_tab_count === 0) {
             $('.protograph-app-intro-holder').css('display', 'block');
+            $('.mobile-header').addClass('protograph-header-home-page');
           } else {
             $('.protograph-app-intro-holder').css('display', 'none');
+            $('.mobile-header').removeClass('protograph-header-home-page');
           }
 
           current_tab = $(`.protograph-app-tab[data-tab="${current_tab_count}"]`);
@@ -53,8 +55,10 @@ const swipeEndCallback = function(e, direction) {
         current_tab_count -= 1;
         if (current_tab_count === 0) {
           $('.protograph-app-intro-holder').css('display', 'block');
+          $('.mobile-header').addClass('protograph-header-home-page');
         } else {
           $('.protograph-app-intro-holder').css('display', 'none');
+          $('.mobile-header').removeClass('protograph-header-home-page');
         }
 
         current_tab = $(`.protograph-app-tab[data-tab="${current_tab_count}"]`);
@@ -79,38 +83,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     mode = 'laptop';
     showChar = 460;
   }
-  // Configure/customize these variables.
-  // var ellipsestext = "...";
-  // var moretext = "पढ़ते रहिये";
-  // var lesstext = "कम दिखाएं";
-
-  // $('.project-description').each(function() {
-  //   var content = $(this).html();
-
-  //   if(content.length > showChar) {
-  //     var c = content.substr(0, showChar);
-  //     var h = content.substr(showChar, content.length - showChar);
-
-  //     var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
-
-  //     $(this).html(html);
-  //   }
-  // });
-
-  // $(".morelink").click(function(){
-  //   if($(this).hasClass("less")) {
-  //     $(this).removeClass("less");
-  //     $(this).html(moretext);
-  //   } else {
-  //     $(this).addClass("less");
-  //     $(this).html(lesstext);
-  //   }
-  //   $(this).parent().prev().toggle();
-  //   $(this).prev().toggle();
-  //   return false;
-  // });
-
-
   if (mode === 'laptop'){
     // Code to animate the home screen.
     setTimeout(() => {
@@ -124,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
               $('.protograph-app-3col-grid').addClass('protograph-app-3col-grid-slide-up');
               setTimeout(() => {
                 $('.briefs-column').sticky({"widthFromWrapper": false});
-                // $('.proto-sidebar').sticky();
                 $('.about-advertisement').sticky();
               },750);
             },650);
@@ -143,12 +114,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           }
         });
     }, 2000);
-    // $('.briefs-column').sticky({topSpacing:62, bottomSpacing: 275});
-    // $('.filter-column').sticky({topSpacing:62, bottomSpacing: 275});
-    // $('.about-advertisement').sticky({topSpacing:62, bottomSpacing: 275});
   } else {
-    $('.protograph-app-tabs-container').sticky({topSpacing:0, zIndex: 100});
-    $('.mobile-header').sticky({topSpacing:3, zIndex: 99});
     getJSON('https://cdn.protograph.pykih.com/579747381e1f4a91c452f854/index.json', function (err, data){
       if (err != null) {
         alert('Something went wrong: ' + err);
@@ -189,23 +155,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         })
       }
   })
-
-  //articles section
-  // setTimeout(()=>{
-  //   getJSON('https://cdn.protograph.pykih.com/579747381e1f4a91c452f854/index.json', function (err, data){
-  //     if (err != null) {
-  //       alert('Something went wrong: ' + err);
-  //     } else {
-  //       data.map((d,i) => {
-  //         let createDiv = document.createElement('div');
-  //         createDiv.id = 'ProtoCard-article'+i
-  //         createDiv.className= 'ProtoCard-article'
-  //         document.getElementById('display-stories').appendChild(createDiv);
-  //         new ProtoEmbed.initFrame(document.getElementById("ProtoCard-article"+i), data[i].iframe_url, data[i].default_view);
-  //       })
-  //     }
-  //   });
-  // },1000);
 
   setInterval(function(){
     getJSON('https://cdn.protograph.pykih.com/jal-jagran/twitter.json', function (err, data){

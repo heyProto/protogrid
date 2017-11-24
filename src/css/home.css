@@ -89,7 +89,7 @@
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  background: red;
+  background: #007cd7;
   padding: 10px;
   color: white;
 }
@@ -101,14 +101,11 @@
   width: 100%;
   z-index: 1000;
 }
-.protograph-app-active-tab-content {
-  display: block;
-}
-.protograph-app-menu-mobile-cross:after {
+/* .protograph-app-menu-mobile-cross:after {
   display: none;
   content: "\00d7";
   font-size: 48px;
-}
+} */
 .protograph-district-page-main-container {
   top: 0px;
 }
@@ -128,8 +125,14 @@
   box-sizing: border-box;
   margin-top: 20px;
 }
-
 @media only screen and (max-width: 450px) {
+  .protograph-app-main-container {
+      height: 100%;
+      background: white;
+  }
+  .article-col, .tweets-section, .why-section {
+    display: none;
+  }
   .protograph-app-3col-grid {
     display: block;
     top: 0px;
@@ -157,19 +160,19 @@
   .protograph-app-intro-holder {
     background-size: cover;
   }
-  .protograph-app-menu-mobile-cross:after {
+  /* .protograph-app-menu-mobile-cross:after {
     display: inline-block;
     position: absolute;
     top: 0px;
     left: 15px;
-  }
+  } */
   .protograph-district-page-navbar {
     left: -500px;
   }
-  .protograph-app-navbar-slide-in {
+  /* .protograph-app-navbar-slide-in {
     left: 0px;
     transition: left 500ms ease-out;
-  }
+  } */
   .protograph-district-page .page-navigation-mobile {
     background: #f1f1f1;
   }
@@ -180,5 +183,8 @@
   .protograph-district-page .protograph-menu-logo {
     height: 30px;
     float: right;
+  }
+  .protograph-app-active-tab-content {
+    display: block;
   }
 }
