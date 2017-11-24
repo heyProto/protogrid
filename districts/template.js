@@ -35,11 +35,13 @@ return `<!DOCTYPE html>
   <body class="index-page">
     <div class="proto-container data-page">
         <div class="proto-col col-2 left-col proto-sidebar">
-            <div class="project-name">#jal-jagran</div>
-            <div class="company-logo"><img src="../src/img/jj-logo.png" width="90%"></div>
+            <a href="../index.html">
+              <div class="project-name">#jal-jagran</div>
+              <div class="company-logo"><img src="../src/img/jj-logo.png" width="90%"></div>
+            </a>
             <div class="sidebar-menu">
-                <a href='../index.html'><div class="sidebar-menu-option">कवरेज</div></a>
-                <a href='../data.html'><div class="sidebar-menu-option active-option">डेटा</div></a>
+              <a href='../index.html'><div class="sidebar-menu-option">कवरेज</div></a>
+              <a href='../data.html'><div class="sidebar-menu-option active-option">डेटा</div></a>
             </div>
             <div class="sidebar-footer">
                 <div class="proto-branding">

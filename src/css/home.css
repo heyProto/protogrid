@@ -3,10 +3,6 @@
   background: transparent;
 }
 .protograph-app-navbar {
-  /*padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 50px;*/
-  /* position: absolute; */
   left: -600px;
 }
 .protograph-app-navbar-slide-in {
@@ -19,21 +15,17 @@
   background-image: url("../img/cover-image.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  /*border-bottom: 1px solid #dadada;*/
   top: 25%;
 }
 .protograph-app-intro-holder-animate {
   top: 0%;
   transition: top 650ms ease-out;
-  /*background-position-y: -150px;*/
-  /*background: black;*/
 }
 .protograph-app-main-container {
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 0px !important;
   height: 100vh;
-  /* background: white; */
 }
 .protograph-app-hashtag-container {
   padding: 10px;
@@ -63,7 +55,6 @@
   padding-right: 20px;
 }
 .protograph-app-description {
-  /*padding-left: 20px;*/
   width: 90%;
   color: white;
 }
@@ -101,11 +92,6 @@
   width: 100%;
   z-index: 1000;
 }
-/* .protograph-app-menu-mobile-cross:after {
-  display: none;
-  content: "\00d7";
-  font-size: 48px;
-} */
 .protograph-district-page-main-container {
   top: 0px;
 }
@@ -124,6 +110,9 @@
   color: white;
   box-sizing: border-box;
   margin-top: 20px;
+}
+.mobile-header {
+  top: 3px;
 }
 @media only screen and (max-width: 450px) {
   .protograph-app-main-container {
@@ -160,19 +149,9 @@
   .protograph-app-intro-holder {
     background-size: cover;
   }
-  /* .protograph-app-menu-mobile-cross:after {
-    display: inline-block;
-    position: absolute;
-    top: 0px;
-    left: 15px;
-  } */
   .protograph-district-page-navbar {
     left: -500px;
   }
-  /* .protograph-app-navbar-slide-in {
-    left: 0px;
-    transition: left 500ms ease-out;
-  } */
   .protograph-district-page .page-navigation-mobile {
     background: #f1f1f1;
   }

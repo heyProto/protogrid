@@ -355,17 +355,16 @@ a {
   width: 100%;
   height: 40px;
   position: fixed;
-  top: 3px;
+  top: 0px;
   z-index: 10;
   background: #efefef;
-  padding: 10px 0px;
+  padding: 10px 10px;
   box-sizing: border-box; }
 
 .protograph-menu-logo {
   position: absolute;
   height: 30px;
-  float: right;
-  right: 0px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%); }
 
@@ -373,6 +372,9 @@ a {
   display: none;
   content: "\00d7";
   font-size: 48px; }
+
+.protograph-app-navbar-page-title {
+  padding-left: 5px; }
 
 .mobile-header.protograph-header-home-page {
   background: transparent; }

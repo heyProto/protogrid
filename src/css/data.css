@@ -93,8 +93,6 @@
   border: 0px solid grey;
   border-radius: 5px;
   color: white;
-  /* padding-top: 5px; */
-  /* padding-bottom: 5px; */
   color: #333;
   padding: 11px;
   margin-right: auto;
@@ -112,8 +110,8 @@
   position: fixed;
   bottom: 20px;
   padding: 15px;
-  width: 50px;
-  height: 50px;
+  width: 17px;
+  height: 21px;
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
@@ -150,8 +148,18 @@
   body {
     background: white;
   }
-  .protograph-app-intro-holder {
-    background-size: cover;
+  .protograph-app-navbar {
+    left: -600px;
+  }
+  .protograph-app-navbar-slide-in {
+    left: auto;
+    transition: left 650ms ease-out;
+  }
+  .cover-image {
+    display: none;
+  }
+  .protograph-app-map-and-list {
+    margin-top: 40px;
   }
   .nav-item {
     width: 50%;
@@ -164,41 +172,22 @@
     display: none;
     z-index: 1000;
   }
-  .filter-area {
+  .protograph-filter-area {
     position: fixed;
     top: 1000px;
     height: 100%;
+    z-index: 100;
+    padding: 0px;
     width: 100% !important;
     background: white;
   }
   .protograph-filter-area-slide-up {
-    top: 55px;
+    top: 50px;
     transition: top 500ms ease-out;
   }
-  .page-navigation-mobile {
-    background: #f1f1f1;
-  }
-  .protograph-app-navbar-page-title {
-    font-size: 24px;
-    padding-left: 15px;
-  }
-  .protograph-menu-logo {
-    height: 30px;
-    float: right;
-  }
-  .protograph-app-intro-holder {
-    display: none;
-  }
-  .protograph-app-navbar {
-    position: fixed;
-    left: -500px;
-    z-index: 1001;
-  }
-  .protograph-app-navbar-slide-in {
-    left: 0px;
-    transition: left 500ms ease-out;
-  }
-  .filter-column {
-    display: block;
+  #show-more-cards{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
   }
 }
