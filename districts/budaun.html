@@ -7,6 +7,7 @@
     <title>#jal-jagran</title>
     <link rel="stylesheet" type="text/css" href="../src/css/proto-grid.css">
     <link rel="stylesheet" type="text/css" href="../src/css/jal-jagran-style.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/district.css">
     <script type="text/javascript">
       var siteId, origin, base_url;
       // Setting variables from environment
@@ -33,34 +34,44 @@
   </head>
   <body class="index-page">
     <div class="proto-container data-page">
-        <div class="proto-col col-2 left-col proto-sidebar">
-            <a href="../index.html">
-              <div class="project-name">#jal-jagran</div>
-              <div class="company-logo"><img src="../src/img/jj-logo.png" width="90%"></div>
-            </a>
-            <div class="sidebar-menu">
-              <a href='../index.html'><div class="sidebar-menu-option">कवरेज</div></a>
-              <a href='../data.html'><div class="sidebar-menu-option active-option">डेटा</div></a>
-            </div>
-            <div class="sidebar-footer">
-                <div class="proto-branding">
-                    <div class="social-share">
-                      <div class="facebook-icon">
-                        <a href="http://www.facebook.com/sharer/sharer.php?u=https://cdn.protograph.pykih.com/jal-jagran-2/index.html" target="_blank" class="share-btn facebook">
-                          <img src="../src/img/facebook-icon.png" height="15px">
-                        </a>
-                      </div>
-                      <div class="twitter-icon">
-                        <a href="http://twitter.com/share?url=https://cdn.protograph.pykih.com/jal-jagran-2/index.html" target="_blank" class="share-btn twitter">
-                           <img src="../src/img/twitter-icon.png" height="15px">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="powered-by-text">Powered by</div>
-                    <img class="protograph-branding" src="../src/img/proto-icon.png" width="50%">
-                </div>
-            </div>
+      <div class="proto-col col-2 left-col proto-sidebar protograph-app-navbar">
+        <div id="protograph_app_close_menu" class="protograph-app-menu-mobile-cross"></div>
+        <div class="protograph-app-navbar-logo-container">
+          <a href="../index.html">
+            <div class="project-name">#jal-jagran</div>
+            <div class="company-logo"><img src="../src/img/jj-logo.png" width="90%"></div>
+          </a>
         </div>
+        <div class="sidebar-menu">
+          <a href='../index.html'><div class="sidebar-menu-option">कवरेज</div></a>
+          <a href='../data.html'><div class="sidebar-menu-option active-option">डेटा</div></a>
+        </div>
+        <div class="sidebar-footer">
+          <div class="proto-branding">
+            <div class="social-share">
+              <div class="facebook-icon">
+                <a href="http://www.facebook.com/sharer/sharer.php?u=https://cdn.protograph.pykih.com/jal-jagran-2/index.html" target="_blank" class="share-btn facebook">
+                  <img src="../src/img/facebook-icon.png" height="15px">
+                </a>
+              </div>
+              <div class="twitter-icon">
+                <a href="http://twitter.com/share?url=https://cdn.protograph.pykih.com/jal-jagran-2/index.html" target="_blank" class="share-btn twitter">
+                  <img src="../src/img/twitter-icon.png" height="15px">
+                </a>
+              </div>
+            </div>
+            <div class="powered-by-text">Powered by</div>
+            <img class="protograph-branding" src="../src/img/proto-icon.png" width="50%">
+          </div>
+        </div>
+      </div>
+      <div class="mobile-header">
+        <span id="dropdownMenuButton">
+          <img class="protograph-menu-icon" src="../src/img/new-menu-icon.png" width="30px">
+        </span>
+        <span class="protograph-app-navbar-page-title">डेटा</span>
+        <img class="protograph-menu-logo" src="../src/img/jj-logo.png">
+      </div>
         <div class="proto-col col-2"></div>
         <div class="proto-col col-14 rigth-col parent-col">
             <div class="proto-col col-14 cover-image">
@@ -68,7 +79,7 @@
                   शाहजहांपुर
                 </div>
             </div>
-            <div class="proto-col col-7">
+            <div class="proto-col col-7 protograph-article-container">
               <div class="district-article-cards" id='card-list-div1'></div>
               <div class="district-article-cards" id='card-list-div2'></div>
               <div class="district-article-cards" id='card-list-div3'></div>

@@ -1,0 +1,18 @@
+@media only screen and (max-width: 450px) {
+    .protograph-app-navbar {
+      left: -600px;
+    }
+    .protograph-app-navbar-slide-in {
+      left: auto;
+      transition: left 650ms ease-out;
+    }
+    .protograph-district-page-navbar {
+        left: -500px;
+    }
+    .cover-image {
+        display: none;
+    }
+    .protograph-article-container {
+        margin-top: 40px;
+    }
+}

@@ -386,6 +386,9 @@ a {
   display: none; }
 
 @media only screen and (max-width: 500px) {
+  #dropdownMenuButton {
+    cursor: pointer; }
+
   .protograph-app-tabs-container {
     display: table; }
 
