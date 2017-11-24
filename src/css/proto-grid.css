@@ -87,4 +87,57 @@ body {
   letter-spacing: 0.5px;
   font-size: 18px; }
 
+@media only screen and (max-width: 500px) {
+  .proto-container {
+    width: 100%;
+    display: inline-block; }
+
+  .col-1 {
+    width: 100%; }
+
+  .col-2 {
+    width: 100%; }
+
+  .col-3 {
+    width: 100%; }
+
+  .col-4 {
+    width: 100%; }
+
+  .col-5 {
+    width: 100%; }
+
+  .col-6 {
+    width: 100%; }
+
+  .col-7 {
+    width: 100%; }
+
+  .col-8 {
+    width: 100%; }
+
+  .col-9 {
+    width: 100%; }
+
+  .col-10 {
+    width: 100%; }
+
+  .col-11 {
+    width: 100%; }
+
+  .col-12 {
+    width: 100%; }
+
+  .col-13 {
+    width: 100%; }
+
+  .col-14 {
+    width: 100%; }
+
+  .col-15 {
+    width: 100%; }
+
+  .col-16 {
+    width: 100%; } }
+
 /*# sourceMappingURL=proto-grid.css.map */

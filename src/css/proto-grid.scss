@@ -86,3 +86,29 @@ $sixteen-col: $container-width/($no-of-cols/16);
     letter-spacing: 0.5px;
     font-size: 18px;
 }
+
+@media only screen and (max-width: 500px) {
+    $full-width: 100%;
+
+    .proto-container{
+        width: $full-width;
+        display: inline-block;
+    }
+
+    .col-1{width: $full-width;}
+    .col-2{width: $full-width;}
+    .col-3{width: $full-width;}
+    .col-4{width: $full-width;}
+    .col-5{width: $full-width;}
+    .col-6{width: $full-width;}
+    .col-7{width: $full-width;}
+    .col-8{width: $full-width;}
+    .col-9{width: $full-width;}
+    .col-10{width: $full-width;}
+    .col-11{width: $full-width;}
+    .col-12{width: $full-width;}
+    .col-13{width: $full-width;}
+    .col-14{width: $full-width;}
+    .col-15{width: $full-width;}
+    .col-16{width: $full-width;}
+}

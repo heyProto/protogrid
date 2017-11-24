@@ -130,7 +130,7 @@ a {
   position: relative; }
 
 .data-page .cover-image {
-  height: 200px; }
+  height: 300px; }
 
 .page-title {
   font-size: 42px;
@@ -139,7 +139,8 @@ a {
   color: white;
   margin-bottom: 10px;
   bottom: 0px;
-  position: absolute; }
+  position: absolute;
+  margin-left: 10px; }
 
 .page-sub-title {
   font-size: 14px;
@@ -324,14 +325,6 @@ a {
   color: #007cd7;
   border-color: #007cd7; }
 
-.map-test {
-  height: 200px;
-  background: red; }
-
-.list-test {
-  height: 200px;
-  background: blue; }
-
 .tabs {
   display: none; }
 
@@ -341,5 +334,9 @@ a {
 .district-article-cards {
   margin-top: 15px;
   margin-bottom: 15px; }
+
+@media only screen and (max-width: 500px) {
+  .desktop-only {
+    display: none; } }
 
 /*# sourceMappingURL=jal-jagran-style.css.map */

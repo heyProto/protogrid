@@ -155,7 +155,7 @@ a{
 
 .data-page{
     .cover-image{
-        height: 200px;
+        height: 300px;
     }
 }
 
@@ -167,6 +167,7 @@ a{
     margin-bottom: 10px;
     bottom: 0px;
     position: absolute;
+    margin-left: 10px;
 }
 
 .page-sub-title{
@@ -382,16 +383,6 @@ a{
     border-color: $brand-color;
 }
 
-.map-test{
-    height: 200px;
-    background: red;
-}
-
-.list-test{
-    height: 200px;
-    background: blue;
-}
-
 .tabs {
   display: none;
 }
@@ -406,4 +397,11 @@ a{
 .district-article-cards{
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .desktop-only{
+        display: none;
+    }
 }
