@@ -37,8 +37,10 @@
 }
 .protograph-app-hashtag-container {
   padding: 10px;
-  height: 180px;
+  margin-bottom: 20px;
   display: table;
+  position: absolute;
+  bottom: 0px;
 }
 .protograph-app-hashtag-group {
   display: table-cell;
@@ -124,6 +126,7 @@
   text-align: center;
   color: white;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 450px) {

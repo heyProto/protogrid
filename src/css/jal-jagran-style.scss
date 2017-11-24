@@ -150,6 +150,7 @@ a{
     height: 300px;
     overflow: hidden;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .data-page{
@@ -161,10 +162,11 @@ a{
 .page-title{
     font-size: 42px;
     font-weight: bold;
-    padding-top: 100px;
     font-family: 'Bitter', serif;
     color: white;
     margin-bottom: 10px;
+    bottom: 0px;
+    position: absolute;
 }
 
 .page-sub-title{
