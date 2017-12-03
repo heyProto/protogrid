@@ -440,6 +440,7 @@ a{
 }
 .protograph-app-navbar-page-title {
     padding-left: 5px;
+    font-family: 'Bitter', serif;
 }
 .mobile-header.protograph-header-home-page {
     background: transparent;
@@ -452,8 +453,22 @@ a{
 }
 @media only screen and (max-width: 500px) {
     #dropdownMenuButton {
-        cursor: pointer;
+      cursor: pointer;
+      background: white;
+      padding-top: 3px;
+      padding-right: 2px;
+      padding-left: 3px;
+      border-radius: 4px;
+      margin-right: 5px;
+      margin-top: -3px;
+      position: relative;
+      display: inline-block;
+      border: 1px solid #efefef;
     }
+    .protograph-menu-logo{
+      height: 20px;
+    }
+
     .protograph-app-tabs-container {
         display: table;
     }
