@@ -122,13 +122,14 @@
     display: inline-block;
   }
   .protograph-app-main-container {
-      height: 100%;
-      background: white;
-      overflow-x: hidden;
-      position: relative;
+    /* height: 100%; */
+    background: white;
+    overflow-x: hidden;
+    position: relative;
   }
   .article-col, .tweets-section, .why-section {
     background: white;
+    height: 100%;
   }
   .tweets-section, .why-section {
     position: absolute;
@@ -141,11 +142,6 @@
     height: 100%;
     background: white;
   }
-  /* .protograph-app-3col-grid {
-    display: block;
-    position: initial;
-    background: white;
-  } */
   .protograph-app-intro-holder {
     top: 0%;
     border-bottom: 0px;
@@ -184,7 +180,12 @@
     float: right;
   }
   .protograph-app-active-tab-content {
-    /* display: block; */
     left: 0px;
+  }
+  .protograph-app-slide-down {
+    bottom: -100px;
+    -webkit-transition: bottom 500ms ease-in;
+    -moz-transition: bottom 500ms ease-in;
+    transition: bottom 500ms ease-in;
   }
 }
