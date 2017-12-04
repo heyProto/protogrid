@@ -18,7 +18,7 @@ function getJSON(url, callback) {
 const swipeEndCallback = function(e, direction) {
   var current_tab = $('.protograph-app-tabs-container .protograph-app-tab.protograph-app-active-tab'),
     current_tab_count,
-    current_tab_content = $('.protograph-app-active-tab-content');
+    current_tab_content = $('.protograph-app-active-tab-content:last');
 
   current_tab = $(current_tab);
   current_tab_count = +current_tab.attr('data-tab');
@@ -28,21 +28,21 @@ const swipeEndCallback = function(e, direction) {
         if (current_tab_count < 2) {
           //switch tabs
           current_tab.removeClass('protograph-app-active-tab');
-          current_tab_content.removeClass('protograph-app-active-tab-content');
+          // current_tab_content.removeClass('protograph-app-active-tab-content');
 
           current_tab_count += 1;
           if (current_tab_count === 0) {
-            $('.protograph-app-intro-holder').css('display', 'block');
             $('.mobile-header').addClass('protograph-header-home-page');
           } else {
-            $('.protograph-app-intro-holder').css('display', 'none');
             $('.mobile-header').removeClass('protograph-header-home-page');
           }
 
           current_tab = $(`.protograph-app-tab[data-tab="${current_tab_count}"]`);
-          current_tab.addClass('protograph-app-active-tab');
+          setTimeout(function() {
+            current_tab.addClass('protograph-app-active-tab');
+          }, 250);
 
-          current_tab_content = $($('.protograph-app-3col-grid').children()[current_tab_count]);
+          current_tab_content = $($('.protograph-tab-content')[current_tab_count]);
           current_tab_content.addClass('protograph-app-active-tab-content');
         }
       break;
@@ -54,10 +54,8 @@ const swipeEndCallback = function(e, direction) {
 
         current_tab_count -= 1;
         if (current_tab_count === 0) {
-          $('.protograph-app-intro-holder').css('display', 'block');
           $('.mobile-header').addClass('protograph-header-home-page');
         } else {
-          $('.protograph-app-intro-holder').css('display', 'none');
           $('.mobile-header').removeClass('protograph-header-home-page');
         }
 
@@ -75,7 +73,10 @@ const swipeEndCallback = function(e, direction) {
 document.addEventListener("DOMContentLoaded", function(event) {
 
   let dimension = getScreenSize(), mode;
-  var showChar;
+  var showChar,
+      twitter_container,
+      article_container;
+
   if (dimension.width <= 500){
     mode = 'mobile';
     showChar = 200
@@ -83,7 +84,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     mode = 'laptop';
     showChar = 460;
   }
+
   if (mode === 'laptop'){
+    article_container = document.getElementById('display-stories');
+    twitter_container = document.getElementById('display-tweets');
     // Code to animate the home screen.
     setTimeout(() => {
       $('.protograph-app-intro-holder').addClass('protograph-app-intro-holder-animate');
@@ -108,13 +112,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
               let createDiv = document.createElement('div');
               createDiv.id = 'ProtoCard-article'+i
               createDiv.className= 'ProtoCard-article'
-              document.getElementById('display-stories').appendChild(createDiv);
+              article_container.appendChild(createDiv);
               new ProtoEmbed.initFrame(document.getElementById("ProtoCard-article"+i), data[i].iframe_url, data[i].default_view);
             })
           }
         });
     }, 2000);
   } else {
+    article_container = document.getElementById('mobile-display-stories');
+    twitter_container = document.getElementById('mobile-display-tweets');
+
     getJSON('https://cdn.protograph.pykih.com/579747381e1f4a91c452f854/index.json', function (err, data){
       if (err != null) {
         alert('Something went wrong: ' + err);
@@ -123,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           let createDiv = document.createElement('div');
           createDiv.id = 'ProtoCard-article'+i
           createDiv.className= 'ProtoCard-article'
-          document.getElementById('display-stories').appendChild(createDiv);
+          article_container.appendChild(createDiv);
           new ProtoEmbed.initFrame(document.getElementById("ProtoCard-article"+i), data[i].iframe_url, data[i].default_view);
         })
       }
@@ -151,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               '<div class="hint-text">'+ month +" "+day+ " "+ year+'</div>'+
             '</div>'+
           '</div></a>';
-        document.getElementById('display-tweets').innerHTML = tweets;
+        twitter_container.innerHTML = tweets;
         })
       }
   })
@@ -176,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               '<div class="hint-text">'+  month +" "+day+ " "+ year+'</div>'+
             '</div>'+
           '</div></a>';
-        document.getElementById('display-tweets').innerHTML = tweets;
+        twitter_container.innerHTML = tweets;
         })
       }
     })
@@ -189,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $(e).attr('data-tab', i);
       var active_tab = $(e).hasClass('protograph-app-active-tab');
       if (active_tab) {
-        var tab_content = ($('.protograph-app-3col-grid').children())[i];
+        var tab_content = $('.protograph-tab-content')[i];
         $(tab_content).addClass('protograph-app-active-tab-content');
       }
     });

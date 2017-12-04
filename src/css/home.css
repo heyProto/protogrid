@@ -114,18 +114,38 @@
 .mobile-header {
   top: 3px;
 }
+.mobile-only {
+  display: none;
+}
 @media only screen and (max-width: 450px) {
+  .mobile-only {
+    display: inline-block;
+  }
   .protograph-app-main-container {
       height: 100%;
       background: white;
+      overflow-x: hidden;
+      position: relative;
   }
   .article-col, .tweets-section, .why-section {
-    display: none;
+    background: white;
   }
-  .protograph-app-3col-grid {
-    display: block;
+  .tweets-section, .why-section {
+    position: absolute;
+    left: 600px;
     top: 0px;
+    -webkit-transition: left 500ms ease-in;
+    -moz-transition: left 500ms ease-in;
+    transition: left 500ms ease-in;
+    z-index: 5;
+    height: 100%;
+    background: white;
   }
+  /* .protograph-app-3col-grid {
+    display: block;
+    position: initial;
+    background: white;
+  } */
   .protograph-app-intro-holder {
     top: 0%;
     border-bottom: 0px;
@@ -164,6 +184,7 @@
     float: right;
   }
   .protograph-app-active-tab-content {
-    display: block;
+    /* display: block; */
+    left: 0px;
   }
 }
