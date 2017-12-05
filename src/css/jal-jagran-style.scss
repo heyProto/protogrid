@@ -231,13 +231,10 @@ a{
 //===== ProtoCard ======//
 
 .proto-card {
-  // padding-left: 10px;
   padding-top: 15px;
-  // padding-right: 20px;
   padding-bottom: 50px;
   width: 100%;
   display: inline-block;
-  border-bottom: 1px solid #efefef;
   position: relative;
 }
 .proto-card .card-title {
@@ -259,6 +256,7 @@ a{
   color: #787878;
   font-size: 12px;
   line-height: 17px;
+  color: rgb(0,124,215);
 }
 .proto-card .card-img {
   padding-left: 0px;

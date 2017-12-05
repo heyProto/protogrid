@@ -195,7 +195,6 @@ a {
   padding-bottom: 50px;
   width: 100%;
   display: inline-block;
-  border-bottom: 1px solid #efefef;
   position: relative; }
 
 .proto-card .card-title {
@@ -216,7 +215,8 @@ a {
 .proto-card .by-time-line .time-ago {
   color: #787878;
   font-size: 12px;
-  line-height: 17px; }
+  line-height: 17px;
+  color: #007cd7; }
 
 .proto-card .card-img {
   padding-left: 0px; }
