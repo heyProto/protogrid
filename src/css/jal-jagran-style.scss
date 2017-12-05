@@ -479,10 +479,11 @@ a{
         display: block;
     }
     .col-content, .about-advertisement {
-        margin-top: 53px;
+        margin-top: 60px;
     }
     .protograph-app-navbar {
         padding: 20px;
+        padding-top: 0px;
     }
     .protograph-app-navbar-slide-in {
         left: 0px;
@@ -498,11 +499,14 @@ a{
     .protograph-app-menu-mobile-cross:after {
         display: inline-block;
         position: absolute;
-        top: 20px;
+        top: 0px;
         left: 20px;
     }
     .protograph-app-navbar-logo-container {
         width: 50%;
         margin: 0 auto;
+    }
+    .sidebar-footer .social-share{
+      margin-bottom: 0px;
     }
 }
