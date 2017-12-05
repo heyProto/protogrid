@@ -280,13 +280,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
       isActive = $('.protograph-app-swipe-left').hasClass('protograph-app-slide-down');
         if (st > lastScrollTop) {
           // downscroll code
-          if (isActive) {
-            $('.protograph-app-swipe-left').removeClass('protograph-app-slide-down');
+          if (!isActive) {
+            $('.protograph-app-swipe-left').addClass('protograph-app-slide-down');
           }
         } else {
           // upscroll code
-          if (!isActive) {
-            $('.protograph-app-swipe-left').addClass('protograph-app-slide-down');
+          if (isActive) {
+            $('.protograph-app-swipe-left').removeClass('protograph-app-slide-down');
           }
       }
       lastScrollTop = st;
