@@ -25,20 +25,20 @@ function throttle(fn, wait) {
     }
   }
 }
-function debounce(func, wait, immediate) {
-  var timeout;
-  return function () {
-    var context = this, args = arguments;
-    var later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
-  };
-};
+// function debounce(func, wait, immediate) {
+//   var timeout;
+//   return function () {
+//     var context = this, args = arguments;
+//     var later = function () {
+//       timeout = null;
+//       if (!immediate) func.apply(context, args);
+//     };
+//     var callNow = immediate && !timeout;
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, wait);
+//     if (callNow) func.apply(context, args);
+//   };
+// };
 const swipeEndCallback = function(e, direction) {
   var current_tab = $('.protograph-app-tabs-container .protograph-app-tab.protograph-app-active-tab'),
     current_tab_count,
@@ -261,10 +261,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
       empty,
     )));
 
+    $('.left-interaction-overlay, .right-interaction-overlay').on('click', (e) => {
+      var $target = $(e.target);
+      if ($target.length) {
+        $target.hide();
+        var iframe = $(document.elementFromPoint(e.clientX, e.clientY))
+        debugger;
+        $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
+        console.log($(document.elementFromPoint(e.clientX, e.clientY)), "sssssss")
+        setTimeout(function() {
+          $target.show();
+        }, 10);
+      }
+    });
+
     $('.protograph-app-main-container').scroll(throttle(function (event) {
       var st = $('.protograph-app-main-container').scrollTop(),
       isActive = $('.protograph-app-swipe-left').hasClass('protograph-app-slide-down');
-      console.log(st > lastScrollTop, st, lastScrollTop, ";;;;;")
         if (st > lastScrollTop) {
           // downscroll code
           if (isActive) {
