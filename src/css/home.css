@@ -77,12 +77,16 @@
 .protograph-app-swipe-left {
   display: none;
   position: fixed;
-  bottom: 50px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   background: #007cd7;
   padding: 10px;
   color: white;
+  font-family: cabin;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 13px;
 }
 .protograph-app-touch-overlay {
   display: none;
