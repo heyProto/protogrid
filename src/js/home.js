@@ -25,20 +25,6 @@ function throttle(fn, wait) {
     }
   }
 }
-// function debounce(func, wait, immediate) {
-//   var timeout;
-//   return function () {
-//     var context = this, args = arguments;
-//     var later = function () {
-//       timeout = null;
-//       if (!immediate) func.apply(context, args);
-//     };
-//     var callNow = immediate && !timeout;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//     if (callNow) func.apply(context, args);
-//   };
-// };
 const swipeEndCallback = function(e, direction) {
   var current_tab = $('.protograph-app-tabs-container .protograph-app-tab.protograph-app-active-tab'),
     current_tab_count,
@@ -46,7 +32,7 @@ const swipeEndCallback = function(e, direction) {
 
   current_tab = $(current_tab);
   current_tab_count = +current_tab.attr('data-tab');
-  console.log(lastScrollTop, ";;;;")
+
   switch(direction) {
     case 'left':
         if (current_tab_count < 2) {
@@ -65,9 +51,7 @@ const swipeEndCallback = function(e, direction) {
           }
 
           current_tab = $(`.protograph-app-tab[data-tab="${current_tab_count}"]`);
-          setTimeout(function() {
-            current_tab.addClass('protograph-app-active-tab');
-          }, 250);
+          current_tab.addClass('protograph-app-active-tab');
 
           current_tab_content = $($('.protograph-tab-content')[current_tab_count]);
           current_tab_content.addClass('protograph-app-active-tab-content');
@@ -234,7 +218,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     setTimeout((e)=> {
       $('.protograph-app-swipe-left').addClass('protograph-app-slide-down');
-      console.log($('.protograph-app-swipe-left'), ";;;;");
     }, 3000);
 
     $('#dropdownMenuButton').on('click', (e) => {
@@ -248,9 +231,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $('.container.proto-container').css('overflow', 'initial');
     });
 
-    $('body').on('touchstart', ((e) =>  touch.swipeStart(e)));
-    $('body').on('touchmove', ((e) =>  touch.swipeMove(e)));
-    $('body').on('touchend', ((e) =>  touch.swipeEnd(e,
+    $('body').on('touchstart', ((e) => touch.swipeStart(e)));
+    $('body').on('touchmove', ((e) => touch.swipeMove(e)));
+    $('body').on('touchend touchcancel', ((e) =>  touch.swipeEnd(e,
       ((e) => {
         swipeEndCallback(e, 'left');
       }),
@@ -260,20 +243,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       empty,
       empty,
     )));
-
-    $('.left-interaction-overlay, .right-interaction-overlay').on('click', (e) => {
-      var $target = $(e.target);
-      if ($target.length) {
-        $target.hide();
-        var iframe = $(document.elementFromPoint(e.clientX, e.clientY))
-        debugger;
-        $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
-        console.log($(document.elementFromPoint(e.clientX, e.clientY)), "sssssss")
-        setTimeout(function() {
-          $target.show();
-        }, 10);
-      }
-    });
 
     $('.protograph-app-main-container').scroll(throttle(function (event) {
       var st = $('.protograph-app-main-container').scrollTop(),

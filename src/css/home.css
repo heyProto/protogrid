@@ -8,7 +8,7 @@
   transition: left 650ms ease-out;
 }
 .protograph-app-navbar-slide-in {
-  left: 0px;
+  left: auto;
 }
 .protograph-app-intro-holder {
   position: relative;
@@ -125,30 +125,12 @@
 .article-col {
   position: relative;
 }
-.interaction-overlay {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  background: black;
-  opacity: 0.5;
-  display: none;
-}
-.left-interaction-overlay, .right-interaction-overlay  {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 35%;
-}
-.right-interaction-overlay {
-  left: auto;
-  right: 0px;
-}
 @media only screen and (max-width: 450px) {
   .mobile-only {
     display: inline-block;
+  }
+  .protograph-app-navbar-slide-in {
+    left: 0px;
   }
   .protograph-app-main-container {
     /* height: 100%; */
@@ -162,7 +144,6 @@
     box-sizing: border-box;
     background: white;
   }
-
   .tweets-section, .why-section {
     background: white;
     height: 100%;
@@ -223,5 +204,27 @@
     -webkit-transition: bottom 500ms ease-in;
     -moz-transition: bottom 500ms ease-in;
     transition: bottom 500ms ease-in;
+  }
+  .interaction-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.5;
+    display: none;
+  }
+  .left-interaction-overlay, .right-interaction-overlay  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 35%;
+    z-index: 200;
+  }
+  .right-interaction-overlay {
+    left: auto;
+    right: 0px;
   }
 }
