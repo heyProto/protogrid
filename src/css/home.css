@@ -3,11 +3,12 @@
   background: transparent;
 }
 .protograph-app-navbar {
+  z-index: 100;
   left: -600px;
+  transition: left 650ms ease-out;
 }
 .protograph-app-navbar-slide-in {
-  left: auto;
-  transition: left 650ms ease-out;
+  left: 0px;
 }
 .protograph-app-intro-holder {
   position: relative;
