@@ -1,4 +1,12 @@
 const webpack = require('webpack');
+const minifier = require('minifier');
+
+// CSS bundle
+const input = './src/css/district.css';
+const options = {
+  output: "jaljagran-district.min.css"
+};
+minifier.minify(input, options);
 
 module.exports = {
   entry: {

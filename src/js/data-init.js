@@ -34,37 +34,22 @@ function throttle(fn, wait) {
     }
   }
 }
-let dimension = getScreenSize(), mode;
-var showChar;
+
+let dimension = getScreenSize(),
+  mode;
 if (dimension.width <= 500){
   mode = 'mobile';
-  showChar = 200
 } else {
   mode = 'laptop';
-  showChar = 460;
 }
-
 
 $(document).ready((e) => {
 
-
   if (mode === 'laptop'){
+    $('.filter-column').sticky({ topSpacing: 0 });
   }
 
   if (mode === 'mobile'){
-    var lastScrollTop = 0;
-    $(window).scroll(throttle((e) => {
-      var st = $(window).scrollTop();
-      if (st > lastScrollTop){
-          // downscroll code
-          // $('.protograph-app-filter-icon').addClass('protograph-app-filter-icon-slide-down');
-        } else {
-          // upscroll code
-          // $('.protograph-app-filter-icon.protograph-app-filter-icon-slide-down').removeClass('protograph-app-filter-icon-slide-down');
-      }
-      lastScrollTop = st;
-    }, 500));
-
     $('#protograph_filter_icon').on('click', ((e) => {
       $('.protograph-filter-area').css('display', 'block');
       setTimeout((e) => {
@@ -143,10 +128,3 @@ var x = new ProtoGraph.Card.toMaps()
   ]
 })
 x.renderLaptop();
-
-$(document).ready(function() {
-  var mode = (window.innerWidth <= 500) ? 'mobile' : 'laptop';
-  if (mode === 'laptop') {
-    $('.filter-column').sticky({topSpacing:0});
-  }
-});

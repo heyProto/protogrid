@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const minifier = require('minifier')
+const minifier = require('minifier');
 const input = ['./src/css/data.css', './src/css/filter.css']
 const options = {
   output: "jaljagran-data.min.css"

@@ -6,9 +6,8 @@ return `<!DOCTYPE html>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>#jal-jagran</title>
-    <link rel="stylesheet" type="text/css" href="../src/css/proto-grid.css">
-    <link rel="stylesheet" type="text/css" href="../src/css/jal-jagran-style.css">
-    <link rel="stylesheet" type="text/css" href="../src/css/district.css">
+    <link rel="stylesheet" type="text/css" href="../jaljagran-style.min.css">
+    <link rel="stylesheet" type="text/css" href="../jaljagran-district.min.css">
     <script type="text/javascript">
       var siteId, origin, base_url;
       // Setting variables from environment
