@@ -121,7 +121,7 @@ a {
   text-align: center; }
 
 .cover-image {
-  background-image: url("../img/cover-image.png");
+  background-image: url("../../img/cover-image.png");
   background-repeat: none;
   background-size: 100%;
   height: 300px;
