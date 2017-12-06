@@ -157,7 +157,7 @@
     height: 280px;
   }
   .protograph-app-navbar {
-    z-index: 100;
+    z-index: 110;
     left: -600px;
     transition: left 650ms ease-out;
   }
@@ -179,7 +179,7 @@
   }
   .protograph-app-filter-close-button {
     display: none;
-    z-index: 1000;
+    z-index: 100;
   }
   .protograph-filter-area {
     position: fixed;
