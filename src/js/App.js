@@ -26,23 +26,40 @@ class App extends React.Component {
     const {dataURL, topoURL} = this.props;
     axios.all([axios.get(dataURL), axios.get(topoURL)])
       .then(axios.spread((card, topo) => {
-        let filters = this.state.filters.map((filter) => {
+
+        let all_data_keys = ["decadal_decrease_score", "rainfall_deficit_score", "land_score", "forest_score", "population_score"],
+          districts_not_in_map = ["Amethi", "Hapur", "Sambhal", "Shamli"],
+          data,
+          filters,
+          filterJSON;
+
+        data = card.data.filter((e) => districts_not_in_map.indexOf(e.district) === -1 )
+
+        data = data.map((e) => {
+            all_data_keys.forEach((f) => {
+              e[f] = e[f] || "उपलब्ध नहीं"
+            });
+            return e;
+        });
+
+        filters = this.state.filters.map((filter) => {
           return {
             name: filter.alias,
             key: filter.propName,
-            filters: this.sortObject(Utils.groupBy(card.data, filter.propName), filter)
+            filters: this.sortObject(Utils.groupBy(data, filter.propName), filter)
           }
         });
-        let filterJSON = [
+
+        filterJSON = [
           {
             name: "Tab - 1",
             filters: filters
           }
-        ]
+        ];
 
         this.setState({
-          dataJSON: card.data,
-          filteredDataJSON: card.data,
+          dataJSON: data,
+          filteredDataJSON: data,
           topoJSON: topo.data,
           filterJSON: filterJSON
         });

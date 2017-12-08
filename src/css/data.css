@@ -138,8 +138,8 @@
 }
 .protogrpah-map-dulled-out {
   cursor: initial;
-  fill: white;
-  fill-opacity: unset;
+  fill: white !important;
+  fill-opacity: unset !important;
 }
 .protograph-app-map-and-list {
   float: right;

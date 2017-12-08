@@ -14,10 +14,10 @@ function highlightCircle(name, data) {
     allCircles = document.getElementsByClassName('map-circles');
   // remove highlight of previous circle
   for (let j=0; j<allCircles.length; j++){
-    allCircles[j].r.baseVal.value = 3    
+    allCircles[j].r.baseVal.value = 3
   }
   for (let i=0; i<getCircles.length; i++){
-    getCircles[i].r.baseVal.value = 5 
+    getCircles[i].r.baseVal.value = 5
   }
 }
 
@@ -28,14 +28,16 @@ function formatDate(date) {
 }
 
 function groupBy(data, column) {
-  let grouped_data = {};
+  let grouped_data = {},
+    key;
   switch(typeof column) {
     case "string":
       data.forEach(datum => {
-        if(grouped_data[datum[column]]) {
-          grouped_data[datum[column]].push(datum);
+        key = datum[column] ? datum[column] : "उपलब्ध नहीं";
+        if(grouped_data[key]) {
+          grouped_data[key].push(datum);
         } else {
-          grouped_data[datum[column]] = [datum];
+          grouped_data[key] = [datum];
         }
       });
       break;

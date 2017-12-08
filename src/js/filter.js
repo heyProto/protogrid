@@ -27,7 +27,6 @@ export default class Filter extends React.Component {
       activeTabJSON: this.props.filterJSON.filter((e,i) => {return e.is_active === true;})
     },
     itemsJSON = stateVars.activeTabJSON;
-
     for(let i = 0; i <= stateVars.currentViewLevel; i++) {
       itemsJSON = itemsJSON.reduce((filtered, data) => {
         if (data.is_active) {
@@ -102,17 +101,6 @@ export default class Filter extends React.Component {
             x.is_hidden = true;
           }
         });
-
-        // let diff = this.arrayDifference(g.filters, h.filters);
-        // console.log(diff, 'llll')
-        // if (diff) {
-        //   diff.forEach((x) => {
-        //     let element = h.filters.find((y) => {return x.name === y.name });
-        //     if (element) {
-        //       element.is_hidden = true;
-        //     }
-        //   });
-        // }
       })
     })
 
@@ -316,7 +304,6 @@ export default class Filter extends React.Component {
       data = data[activeTabJSON.filters[parent_ids[i]].key]
       activeTabJSON = activeTabJSON.filters[parent_ids[i]];
     }
-
     return data;
   }
 
