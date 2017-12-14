@@ -144,6 +144,13 @@
 .protograph-app-map-and-list {
   float: right;
 }
+
+.protograph-app-star {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+}
+
 @media only screen and (max-width: 450px ) {
   body {
     background: white;

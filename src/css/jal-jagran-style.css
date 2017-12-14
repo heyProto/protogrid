@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Cabin:400,500,600,700");
 p {
   font-family: cabin;
   margin: 5px 0px;
@@ -15,7 +14,7 @@ p {
   font-weight: bold;
   margin-bottom: 10px;
   padding-top: 10px;
-  font-family: 'Bitter', serif;
+  font-family: 'Sarala', sans-serif;
   color: #222; }
 
 .sidebar-menu {
@@ -29,7 +28,7 @@ p {
   opacity: 1;
   font-size: 16px;
   text-transform: uppercase;
-  font-family: 'cabin', serif;
+  font-family: 'Sarala', sans-serif;
   padding: 7px 0px;
   border-bottom: 1px solid #e8e8e8;
   cursor: pointer;
@@ -85,7 +84,7 @@ a {
 .protograph-app-navbar-hashtag {
   font-size: 20px;
   padding-bottom: 5px;
-  font-family: 'Bitter', serif;
+  font-family: 'Sarala', sans-serif;
   font-weight: 700; }
 
 .protograph-app-navbar-logo-image {
@@ -135,7 +134,7 @@ a {
 .page-title {
   font-size: 42px;
   font-weight: bold;
-  font-family: 'Bitter', serif;
+  font-family: 'Sarala', sans-serif;
   color: white;
   margin-bottom: 10px;
   bottom: 0px;
@@ -294,7 +293,7 @@ a {
 
 .filter-col {
   font-size: 16px;
-  font-family: cabin;
+  font-family: 'Sarala', sans-serif;
   margin-top: -10px;
   padding: 0px 10px; }
 
@@ -376,7 +375,7 @@ a {
 
 .protograph-app-navbar-page-title {
   padding-left: 5px;
-  font-family: 'Bitter', serif; }
+  font-family: 'Sarala', sans-serif; }
 
 .mobile-header.protograph-header-home-page {
   background: transparent; }

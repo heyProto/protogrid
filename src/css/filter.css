@@ -173,7 +173,7 @@
   transition: left 500ms ease-in;
 }
 .protograph-filters-open {
-  overflow-y: scroll;
+  overflow-y: auto;
   top: 52px;
   width: 100%;
   transition: top 500ms ease-in;

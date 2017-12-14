@@ -438,10 +438,21 @@ export default class Filter extends React.Component {
                 </div>
                 {
                   allFilters[e].map((f, j) => {
+                    let name;
+                    if (!f.renderName) {
+                      name = f.name;
+                    } else {
+                      if (f.renderName && f.renderName.constructor === Function) {
+                        name = f.renderName(f);
+                      } else if (f.renderName && f.renderName.constructor === String) {
+                        name = f.renderName;
+                      }
+                    }
+
                     return (
                       <div key={j} className="protograph-filters-all-filters-group-item" data-item_id={f.id} data-item_key={e}>
                         <div className="protograph-filters-all-filters-group-item-name">
-                          {f.name}
+                          {name}
                         </div>
                         <div className="protograph-filters-all-filters-group-item-cross" onClick={((e) => { this.removeFilter(e);})}>
                           ×
@@ -490,13 +501,23 @@ export default class Filter extends React.Component {
                 return <div key={i} />;
               }
 
-              let onClickCallback;
+              let onClickCallback,
+                name;
               if(e.filters && e.filters.length > 0) {
                 onClickCallback = this.moveIn;
               } else {
                 onClickCallback = e.is_active ? this.unRegisterFilter : this.registerFilter;
               }
 
+              if (!e.renderName) {
+                name = e.name;
+              } else {
+                if (e.renderName && e.renderName.constructor === Function) {
+                  name = e.renderName(e);
+                } else if (e.renderName && e.renderName.constructor === String) {
+                  name = e.renderName;
+                }
+              }
 
               return (
                 <div
@@ -506,7 +527,7 @@ export default class Filter extends React.Component {
                   data-item_id={i}
                 >
                   <div className="protograph-filter-item-name" >
-                    {e.name}
+                    { name }
                   </div>
                   {
                     (e.filters && e.filters.length > 0) ?

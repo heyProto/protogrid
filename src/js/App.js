@@ -109,12 +109,33 @@ class App extends React.Component {
 
   }
 
+  renderStars(d) {
+    let stars = [],
+      i;
+    if (d.value === "उपलब्ध नहीं") {
+      return d.name;
+    }
+    for (i = 0; i < 5; i++) {
+      if (i < d.value) {
+        stars.push(<i key={i} className="star icon"></i>);
+      } else {
+        stars.push(<i key={i} className="empty star icon"></i>);
+      }
+    }
+    return stars.map((e,i) => {
+      return (
+        e
+      )
+    });
+  }
+
   sortObject(obj, filter) {
     var arr = [];
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
         arr.push({
           'name': `रेटिंग - ${prop}`,
+          'renderName': this.renderStars,
           'value': prop,
           'count': obj[prop].length
         });
@@ -148,7 +169,7 @@ class App extends React.Component {
         name: "Tab - 1",
         filters: filtDat
       }
-    ]
+    ];
 
     this.setState({
       filteredDataJSON: filteredData,
