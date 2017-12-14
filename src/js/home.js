@@ -133,6 +133,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
           }
         });
     }, 2000);
+
+    $(window).scroll(throttle(function (event) {
+      var window_scroll_top = $(window).scrollTop(),
+        hastag_offset = $('.protograph-app-hashtag').offset(),
+        hastag_height = $('.protograph-app-hashtag').height(),
+        hidden_hashtag = $('.project-name');
+
+      if ( window_scroll_top > (hastag_offset.top + hastag_height)) {
+        // downscroll code
+        if (hidden_hashtag.hasClass('protograph-hide-content')) {
+          hidden_hashtag.removeClass('protograph-hide-content');
+        }
+      } else {
+        // upscroll code
+        if (!hidden_hashtag.hasClass('protograph-hide-content')) {
+          hidden_hashtag.addClass('protograph-hide-content');
+        }
+      }
+    }, 50));
+
+
   } else {
     article_container = document.getElementById('mobile-display-stories');
     twitter_container = document.getElementById('mobile-display-tweets');

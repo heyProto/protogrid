@@ -127,7 +127,20 @@
 .article-col {
   position: relative;
 }
+.project-name {
+  -webkit-transition: max-height 500ms ease-out;
+  -moz-transition: max-height 500ms ease-out;
+  transition: max-height 500ms ease-out;
+  max-height: initial;
+}
+.protograph-hide-content {
+  max-height: 0px;
+  overflow: hidden;
+}
 @media only screen and (max-width: 450px) {
+  .protograph-hide-content {
+    max-height: initial;
+  }
   .mobile-only {
     display: inline-block;
   }
