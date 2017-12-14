@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       var window_scroll_top = $(window).scrollTop(),
         hastag_offset = $('.protograph-app-hashtag').offset(),
         hastag_height = $('.protograph-app-hashtag').height(),
-        hidden_hashtag = $('.project-name');
+        hidden_hashtag = $('.protograph-app-navbar-logo-container');
 
       if ( window_scroll_top > (hastag_offset.top + hastag_height)) {
         // downscroll code
