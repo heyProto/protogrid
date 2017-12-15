@@ -16,8 +16,15 @@ for(i in districts){
       var url = "var mode = (window.innerWidth <= 500) ? 'mobile' : 'laptop';"
       var divs=""
       for(var j in iframes){
-        var indexs=+j+1
-        url+="new ProtoEmbed.initFrame('card-list-div"+indexs+"','"+ iframes[+j]["iframe_url"] + "', mode);"
+        var indexs=+j+1,
+          d = iframes[j];
+
+        if ((d.schema_id === 'c604e96223dd12fbf314') || (d.schema_id === '6ba6a13bf0ccd536d78c')) {
+          url += "new ProtoEmbed.initFrame('card-list-div" + indexs + "','" + iframes[+j]["iframe_url"] + "', 'mobile');"
+        } else {
+          url+="new ProtoEmbed.initFrame('card-list-div"+indexs+"','"+ iframes[+j]["iframe_url"] + "', mode);"
+        }
+
       }
       var data = HTMLTemplate({
         district_name_eng: district,
