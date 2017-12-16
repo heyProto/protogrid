@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   let dimension = getScreenSize(), mode;
   var showChar,
-      twitter_container,
+      more_article_container,
       article_container;
 
   if (dimension.width <= 500){
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   if (mode === 'laptop'){
     article_container = document.getElementById('display-stories');
-    twitter_container = document.getElementById('display_more_articles');
+    more_article_container = document.getElementById('display_more_articles');
     // Code to animate the home screen.
     setTimeout(() => {
       $('.protograph-app-intro-holder').addClass('protograph-app-intro-holder-animate');
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           setTimeout(() => {
               $('.protograph-app-3col-grid').addClass('protograph-app-3col-grid-slide-up');
               setTimeout(() => {
-                $('.briefs-column').sticky({"widthFromWrapper": false});
+                $('.more-articles').sticky({"widthFromWrapper": false});
                 $('.about-advertisement').sticky();
               },750);
             },650);
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               let createDiv = document.createElement('div');
               createDiv.id = 'ProtoCard-more-articles-' + i;
               createDiv.className = 'ProtoCard-article';
-              twitter_container.appendChild(createDiv);
+              more_article_container.appendChild(createDiv);
               new ProtoEmbed.initFrame(document.getElementById("ProtoCard-more-articles-" + i), d.iframe_url, d.default_view);
             })
           }
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   } else {
     article_container = document.getElementById('mobile-display-stories');
-    twitter_container = document.getElementById('mobile_display_more_articles');
+    more_article_container = document.getElementById('mobile_display_more_articles');
 
     getJSON('https://cdn.protograph.pykih.com/579747381e1f4a91c452f854/index.json', function (err, data){
       if (err != null) {
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           let createDiv = document.createElement('div');
           createDiv.id = 'ProtoCard-more-articles-' + i;
           createDiv.className = 'ProtoCard-article';
-          twitter_container.appendChild(createDiv);
+          more_article_container.appendChild(createDiv);
           new ProtoEmbed.initFrame(document.getElementById("ProtoCard-more-articles-" + i), d.iframe_url, d.default_view);
         })
       }
