@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           }
         });
 
-        getJSON('https://dkqrqc7q64awx.cloudfront.net/f58333bd6965d066c50fcfde/index.json', function (err, data) {
+        getJSON('https://cdn.protograph.pykih.com/431c5f381a07b3c1393d6821/index.json', function (err, data) {
           if (err != null) {
             alert('Something went wrong: ' + err);
           } else {
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     });
 
-    getJSON('https://dkqrqc7q64awx.cloudfront.net/f58333bd6965d066c50fcfde/index.json', function (err, data) {
+    getJSON('https://cdn.protograph.pykih.com/431c5f381a07b3c1393d6821/index.json', function (err, data) {
       if (err != null) {
         alert('Something went wrong: ' + err);
       } else {
