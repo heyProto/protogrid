@@ -132,6 +132,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
           }
         });
+
+        getJSON('https://dkqrqc7q64awx.cloudfront.net/f58333bd6965d066c50fcfde/index.json', function (err, data) {
+          if (err != null) {
+            alert('Something went wrong: ' + err);
+          } else {
+            data.map((d, i) => {
+              let createDiv = document.createElement('div');
+              createDiv.id = 'ProtoCard-more-articles-' + i;
+              createDiv.className = 'ProtoCard-article';
+              twitter_container.appendChild(createDiv);
+              new ProtoEmbed.initFrame(document.getElementById("ProtoCard-more-articles-" + i), d.iframe_url, d.default_view);
+            })
+          }
+        });
     }, 2000);
 
     $(window).scroll(throttle(function (event) {
@@ -171,22 +185,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
         })
       }
     });
+
+    getJSON('https://dkqrqc7q64awx.cloudfront.net/f58333bd6965d066c50fcfde/index.json', function (err, data) {
+      if (err != null) {
+        alert('Something went wrong: ' + err);
+      } else {
+        data.map((d, i) => {
+          let createDiv = document.createElement('div');
+          createDiv.id = 'ProtoCard-more-articles-' + i;
+          createDiv.className = 'ProtoCard-article';
+          twitter_container.appendChild(createDiv);
+          new ProtoEmbed.initFrame(document.getElementById("ProtoCard-more-articles-" + i), d.iframe_url, d.default_view);
+        })
+      }
+    });
   }
   $(".banner-div a:empty").parent("p").css("display", "none");
-
-  getJSON('https://dkqrqc7q64awx.cloudfront.net/f58333bd6965d066c50fcfde/index.json', function (err, data) {
-    if (err != null) {
-      alert('Something went wrong: ' + err);
-    } else {
-      data.map((d, i) => {
-        let createDiv = document.createElement('div');
-        createDiv.id = 'ProtoCard-more-articles-' + i;
-        createDiv.className = 'ProtoCard-article';
-        twitter_container.appendChild(createDiv);
-        new ProtoEmbed.initFrame(document.getElementById("ProtoCard-more-articles-" + i), d.iframe_url, d.default_view);
-      })
-    }
-  });
 
   //Code to move tabs
   if (mode === 'mobile') {
