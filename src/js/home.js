@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   if (mode === 'laptop'){
     article_container = document.getElementById('display-stories');
-    twitter_container = document.getElementById('display-tweets');
+    twitter_container = document.getElementById('display_more_articles');
     // Code to animate the home screen.
     setTimeout(() => {
       $('.protograph-app-intro-holder').addClass('protograph-app-intro-holder-animate');
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   } else {
     article_container = document.getElementById('mobile-display-stories');
-    twitter_container = document.getElementById('mobile-display-tweets');
+    twitter_container = document.getElementById('mobile_display_more_articles');
 
     getJSON('https://cdn.protograph.pykih.com/579747381e1f4a91c452f854/index.json', function (err, data){
       if (err != null) {
@@ -174,48 +174,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
   $(".banner-div a:empty").parent("p").css("display", "none");
 
-  //twitter chatter
-  getJSON('https://cdn.protograph.pykih.com/jal-jagran/twitter.json', function (err, data){
-      if (err != null) {
-        alert('Something went wrong: ' + err);
-      } else {
-        let tweets = '';
-        data.map((d,i) => {
-          tweets += '<a href="'+d.canonical+'" target="_blank" class="protograph-url"><div class="proto-card tolink-card">'+
-            '<div class="briefs-layout">'+
-              '<div class="card-text">' + d.description + '</div>'+
-              '<div class="by-time-line">'+
-                '<div class="by-line protograph-house-color">' + d.author + '</div>'+
-              '</div>'+
-              '<div class="hint-text">'+ $.timeago(d.date) +'</div>'+
-            '</div>'+
-          '</div></a>';
-        twitter_container.innerHTML = tweets;
-        })
-      }
-  })
-
-  setInterval(function(){
-    getJSON('https://cdn.protograph.pykih.com/jal-jagran/twitter.json', function (err, data){
-      if (err != null) {
-        alert('Something went wrong: ' + err);
-      } else {
-        let tweets = '';
-        data.map((d,i) => {
-          tweets += '<a href="'+d.canonical+'" target="_blank" class="protograph-url"><div class="proto-card tolink-card">'+
-            '<div class="briefs-layout">'+
-              '<div class="card-text">' + d.description + '</div>'+
-              '<div class="by-time-line">'+
-                '<div class="by-line">' + d.author + '</div>'+
-              '</div>'+
-            '<div class="hint-text">' + $.timeago(d.date) +'</div>'+
-            '</div>'+
-          '</div></a>';
-        twitter_container.innerHTML = tweets;
-        })
-      }
-    })
-  }, 60000)
+  getJSON('https://dkqrqc7q64awx.cloudfront.net/f58333bd6965d066c50fcfde/index.json', function (err, data) {
+    if (err != null) {
+      alert('Something went wrong: ' + err);
+    } else {
+      data.map((d, i) => {
+        let createDiv = document.createElement('div');
+        createDiv.id = 'ProtoCard-more-articles-' + i;
+        createDiv.className = 'ProtoCard-article';
+        twitter_container.appendChild(createDiv);
+        new ProtoEmbed.initFrame(document.getElementById("ProtoCard-more-articles-" + i), d.iframe_url, d.default_view);
+      })
+    }
+  });
 
   //Code to move tabs
   if (mode === 'mobile') {
