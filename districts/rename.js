@@ -13,16 +13,17 @@ for(i in districts){
   https.get(dist, function (response){
     response.on('data',function(chunk){
       var iframes = JSON.parse(chunk.toString());
-      var url = "var mode = (window.innerWidth <= 500) ? 'mobile' : 'laptop';"
+      var url = "var mode = (window.innerWidth <= 500) ? 'mobile' : 'laptop';\n"
       var divs=""
       for(var j in iframes){
         var indexs=+j+1,
           d = iframes[j];
 
         if ((d.schema_id === 'c604e96223dd12fbf314') || (d.schema_id === '6ba6a13bf0ccd536d78c')) {
-          url += "new ProtoEmbed.initFrame('card-list-div" + indexs + "','" + iframes[+j]["iframe_url"] + "', 'mobile');"
+          // url = `var mode${indexs} = (window.innerWidth <= 500) ? 'mobile' : 'laptop_col4';\n`;
+          // url += `new ProtoEmbed.initFrame('card-list-div" + indexs + "','" + iframes[+j]["iframe_url"] + "', mode${indexs});\n`;
         } else {
-          url+="new ProtoEmbed.initFrame('card-list-div"+indexs+"','"+ iframes[+j]["iframe_url"] + "', mode);"
+          url+="new ProtoEmbed.initFrame('card-list-div"+indexs+"','"+ iframes[+j]["iframe_url"] + "', mode);\n"
         }
 
       }
